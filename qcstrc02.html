@@ -1,0 +1,464 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+            "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+
+<META http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<META name="GENERATOR" content="hevea 1.10">
+<STYLE type="text/css">
+.li-itemize{margin:1ex 0ex;}
+.li-enumerate{margin:1ex 0ex;}
+.dd-description{margin:0ex 0ex 1ex 4ex;}
+.dt-description{margin:0ex;}
+.toc{list-style:none;}
+.thefootnotes{text-align:left;margin:0ex;}
+.dt-thefootnotes{margin:0em;}
+.dd-thefootnotes{margin:0em 0em 0em 2em;}
+.footnoterule{margin:1em auto 1em 0px;width:50%;}
+.caption{padding-left:2ex; padding-right:2ex; margin-left:auto; margin-right:auto}
+.title{margin:2ex auto;text-align:center}
+.center{text-align:center;margin-left:auto;margin-right:auto;}
+.flushleft{text-align:left;margin-left:0ex;margin-right:auto;}
+.flushright{text-align:right;margin-left:auto;margin-right:0ex;}
+DIV TABLE{margin-left:inherit;margin-right:inherit;}
+PRE{text-align:left;margin-left:0ex;margin-right:auto;}
+BLOCKQUOTE{margin-left:4ex;margin-right:4ex;text-align:left;}
+TD P{margin:0px;}
+.boxed{border:1px solid black}
+.textboxed{border:1px solid black}
+.vbar{border:none;width:2px;background-color:black;}
+.hbar{border:none;height:2px;width:100%;background-color:black;}
+.hfill{border:none;height:1px;width:200%;background-color:black;}
+.vdisplay{border-collapse:separate;border-spacing:2px;width:auto; empty-cells:show; border:2px solid red;}
+.vdcell{white-space:nowrap;padding:0px;width:auto; border:2px solid green;}
+.display{border-collapse:separate;border-spacing:2px;width:auto; border:none;}
+.dcell{white-space:nowrap;padding:0px;width:auto; border:none;}
+.dcenter{margin:0ex auto;}
+.vdcenter{border:solid #FF8000 2px; margin:0ex auto;}
+.minipage{text-align:left; margin-left:0em; margin-right:auto;}
+.marginpar{border:solid thin black; width:20%; text-align:left;}
+.marginparleft{float:left; margin-left:0ex; margin-right:1ex;}
+.marginparright{float:right; margin-left:1ex; margin-right:0ex;}
+.theorem{text-align:left;margin:1ex auto 1ex 0ex;}
+.part{margin:2ex auto;text-align:center}
+</STYLE>
+</HEAD>
+<BODY >
+<!--HEVEA command line is: hevea -->
+<!--CUT DEF section 1 --><PRE CLASS="verbatim">
+
+                   projection of quasi-crystals
+                   note the following assumption
+
+                         input data
+     *********************************************************
+           origin of the vector ej should be in a occupation
+                             domain
+     *********************************************************
+
+     (0) inpm, iphas
+         inpm=0 separatel file (standard input, flnm1 and flnm2)
+             =1 standard input only
+         iphas=1 for periodic phason (long-wavelength phason)
+               0 for non-periodic phason (liniear phason)
+
+
+     (1) title
+     (2) isys,a,(c),eps1,eps2,eps3,eps4,eps5,eps6,ists
+           isys: 1 icosahedral or its pentagonal distortion
+                 2 icosahedral or its cubic or orthrhombi distortion
+                   (***icosahedral or its trigonal distortion)
+                 3 decagonal or its orthorhombic distortion
+                 4 octagonal
+                 5 dodecagonal
+         a,c : lattice papameter
+           eps1:  pentagonal phason distortion (isys=1)
+                  cubic phason distortion  (isys=2)
+           eps2: orthorhombic phason distortion 1 (1,1 element) (isys=1
+                 (***trigonal phason distortion (3,3) element (isys=2))
+           eps3: orthorhombic phason distortion 2 (2,2 element) (isys=1
+                 (***trigonal phason distortion (1,1)=(2,2) element (is
+           eps4: monoclinic phason distortion 3 (1,2 element) (isys=1,3
+                 orthorhombic phason distortion (2,2) element (isys=2)
+                      difference from cubic
+           eps5: monoclinic phason distortion 4 (2,1 element) (isys=1,3
+                 orthorhombic phason distortion (3,3) element (isys=2)
+                      difference from cubic
+           eps6: phonon distortion (along z-axis isys=1,3)
+                 trigonal phonon distortion 2 (isys=2)
+           ists: 0 true site symmetry operators are used
+               1 fictitious site symmetry operators are used for all at
+     (3) na npod ne isim imod
+          na: number of atoms
+          npod : number of predefined occupation domsins
+          ne : number of elements
+          isim: order of similarity transformation
+                isim = 0 no magnification
+                isim &gt; 0 deflate by tau**-isim times
+                isim &lt; 0 inflate by tau**-isim times
+                      isim=-2,-1,0,1, or 2  etc.
+                tau: ratio of selfsymilarity
+                    =(1+sqrt(5))/2=1.618 for decagonal
+                                             and face-centered icosahed
+                    =sqrt(2)=1.414 ? for octagonal
+          imod: 1: lattice constant a is multiplied by tau**isim
+                   this makes inflation or deflation impossible
+                   but isim &gt; 0 and imod=1 may be effective for
+                   reducing the value of ihmax in (8) and for
+                   fast calculation
+                0: no multiplication for the lattice constant
+
+     ******** if inpm=0 skip (4) ******
+     (4) flnm1
+         flnm1 : filename which gives the following items
+
+
+     ******** if inpm=1 skip (01)-(07) ******
+#######################################################################
+      (01) nsymo,icent,brv
+          nsymo: number of generators in symmetry operations
+          icent: give 1 for centrosymmetric
+                 otherwise give 0
+          brv  : 'p','i','f' 's' 'c' bravais lattice
+                  s in icosahedral  ==&gt; face-centered superlattice
+                  s in decagonal    ==&gt; Edagawa type superlattice
+                  s translates x,ej,xi in the normal lattice into those
+                                   in superlattice
+                  in decagonal case, s also translates sym. op in norma
+                     lattice into those in superlattice
+                  c P_2c for color symmetry
+                  'g' is for the groupoid symmetry in quasicrystal
+          *************************************************************
+          when brv='s',  give x0,xe,xi,ej in the fundamental cell.
+          they are transformed into those of the supercell in the progr
+          *************************************************************
+     (02) 'symmetry operator'        header  and
+     (03)  symmetry operator in the I.T. format: x,y,z,t,u,v etc.
+            ***** repeat (03) nsymo times
+     (03') if brv='g'
+           hull element   (header)
+           hull operator in the IT format including x,y,z,t,u,v
+                    and centering translations
+           repeat this ig times.
+     (03")   innn: number of repeats of transformation given above
+               ****** (isys=4,brv='s' only)******
+     (04) n,nej0,itype,str (*)
+         n    : serial number for the guide to the eye
+         nej0 :number of edge vectors for predefined occupation domain
+         itype  :  1 domain with icosahedral, degagonal or octagonal symm.
+                   2 domain with other symmetry
+                  -1 domain with icosahedral, degagonal or octagonal symm.
+                  -2 domain with other symmetry for test
+         str  : string for comments
+     (05) ej
+          ej:  edge vectors of two triangles in the 6D coordinate syste
+               repeat (5) nej0 times
+                ***************notice****************
+               the internal components of consecutive ej are regarded a
+               the consecutive edge vectors of the polyhedron defining
+               the occupation domain
+                ***************notice***************
+     (06) nth, (mej(1),mej(2),,),... nth times
+          nth: number of tetrahedra
+          mej: a triplet of vector numbers specifying a tetrahedron
+                           (for isys=1,2)
+          mej: a pair of vector numbers specifying a tetrahedron
+                           (for isys=3,4,5)
+     (07) iaslct(1-(nsymo+icent*nsymo)) (60i1) 1:selected, 0:skipped **
+       ******** repeat (01)-(07) npod times
+ ######################################################################
+
+     ******** if inpm=0 skip (5) ******
+     (5) flnm2
+         flnm2 : filename which gives the following items
+
+     ******** if inpm=1 skip (01)-(08) ******
+ ######################################################################
+     (01) no,symb,ien,ish,nev,be,bi,ramin,ramax,p,s1,s2  (*)
+         no: atom number
+         symb: site symbol
+         ien: element number (1:Al 2:Mn etc.)
+         if ish &gt; 0:  ish-th predefined occupation domain
+         else
+           for icosahedral case
+             ish=0 polyhedron
+             ish=-1: ellipsoid
+             ish=-2: sphere   ( rmax: the radius of the sphere in a )
+           for dihedral case
+             ish=0 triangle
+             ish=-1: ellips
+             ish=-2: circle   ( rmax: the radius of the sphere in a )
+         nev: number of edge vectors for ish=0    (&lt;=nemax=50)
+              number of principal axes (=2 or 3) for ish=1
+              consequtive three vectors are regarded as the edge vector
+              of a tetrahedron defining the occupation domain (ish=0)
+         be: isotropic temperature factor in external space
+         bi: isotropic temperature factor in internal space
+    ******     for decagonal case    *****
+         be: isotropic temperature factor in the plane normal to 10
+         bi: isotropic temperature factor along 10
+
+         ramin :  scale for unoccupied tetrahedron or rhombohedron
+         ramax :  scale for occupied tetrahedron or rhombohedron
+            if ish=2 ramax=1 means shere with radius of 1.4325 (ca)
+            (radius of the shere equivalent to unit triacontahedron
+                    creating the 3d penrose pattern)
+         p    : occupation probability
+         s1    : percentage of first component
+         s2    : percentage of second component
+         (** one site is assumed to be occupied by two atoms**)
+
+          ***** ish=-1 to use truncated triacontahedron *****
+              ra or rb=1 corresponds to the triacontahedron with
+                   unit edge length
+
+     (02)  x0(1)-x0(6): coordinate of atom in 5D, or 6D for dihedral an
+     (03)  xe1(1)-xe1(6),u1 shift vector in ve and magnitude  (5D,6D or
+     (04)  xe2(1)-xe2(6),u2 shift vector in ve and magnitude  (5D,6D or
+     (05)  xe3(1)-xe3(6),u3 shift vector in ve and magnitude  (5D,6D or
+     (06)  xi(1)-xi(6),v shift vector in vi and magnitude  (5D,6D or 7D
+           5D: octagonal, 6D: decagonal and icosahedral 7D: dodecagonal
+       ****** for colored atom give xi(6)=1 (normal color)
+                      or -1 (inverse color)********
+     ****** colored atom should be black (icol=0) or white (icol=10) **
+     ******** colored symmetry is only available for polygonal cases **
+        ******* if(ish.gt.0) skip (07) (08)****
+
+                     the following judge is used for icosahedral cases
+                     rimax: maximum |ej|
+                     rimin: minumum |ej| which is calculated in getnii
+                                                   or in getnid
+                     ri &gt; rimax out of the domain
+                     ri &lt; rimin in the domain
+                     rimax &gt; ri &gt; rimin need accurate calculation
+                        using the domain shape
+               Note that this is not correct in general
+               Please include the origin in the domain
+      ************************************************
+ ######################################################################
+     (5') itempf
+          If itempf=1
+          xe1,xe2,xe3 are used to describe anisotropic temperature fact
+          however if xe1 and xe2 are orthogonal then third axis orthogo
+          to them are used neglecting specified xe3. in this case
+          zero vector xe3 can be specified if it is not necessary
+          as a shift vector
+
+          but if more than two of them is zero, cartesian coordinate sy
+          in the external space is used instead for that atoms (or OD)
+
+     (6) flnm3
+         filename for the data given by (60)-(61)
+
+     (60) nx
+     (61) z,jz,(ja1(j),ja2(j),ea(j),j=1,jz)
+          z  : independent parameter
+          jz : number of terms related with z
+          ja1: atom number
+          ja2: u,v,be,be,ramin,ramax,p,s for 1-8
+          ea : coefficient
+               u,v,etc. = z*ea
+           *******repeat (61) nx times********
+
+            if itempfi=0 skip (7)
+      (7)  itempfi  (80i1)
+            itempfi : 0 for iso 1 for anisotropic temperature factor
+            for individual atom
+
+      (8) icont    
+            icont=0 : does not use parameters in flnm4 file
+                  1 : use parameters in flnm4 file
+
+      (9) flnm4
+             filename of the parameter file
+
+      (10) jaslct (80i)
+          atom selection: if j-th column is 1 or 0 j-th atom is selecte
+      (11) iel (iel(1)-iel(3))
+                iel : kind of atom for first, second and third atoms in
+                      scattering factor table (1&lt;=iel(1),iel(2),iel(3)&lt;
+               (repeat ne times) atp
+      if(isys&lt;=2) skip iarrow
+      (12) job,icase,ihmax,iatom,iwxy,ldev,inum
+      if(isys&gt;=3)
+      (12) job,icase,ihmax,iatom,iwxy,ldev,inum,iarrow
+
+          job=0 plot projection of quasi-crystal along an axis
+             =1 generation of structural data  (for prjap and iatom)
+                (serial No. OD No. element No. x y z p1 p2 p3)
+             =-1 generation of structural data
+                (serial No. OD No. x y z h qe qi)
+          icase= 1: projection along n-fold axis  (n=5,8,10,12)
+                    z: n-fold (z-) axis in dihedral quasicrystal
+                    y: y axis in dihedral quasicrystal
+                 2: projection along 3-fold axis
+                    z: 3-fold axis in cubic approximant
+                    x: 2-fold axis in cubic approximant
+                 3: projection along 2-fold axis
+                    z: 2-fold (y-) axis in pentagonal quasicrystal
+                    x: 5-fold axis (z-) in pentagonal quasicrystal
+                 4: projection along z-axis in cubic approximant
+                    z: z-axis in cubic approximant
+                    x: x-axis in cubic approximant
+                 5: projection along specified direction
+
+          ihmax: maximum indices, -ihmax&lt;=h(i)&lt;=ihmax
+               default=3 for decagonal (usually ihmax&lt;=5)
+               for job=2 ihmax=1 should be sufficient
+               if an appropriate isim is chosen ? (isim = -1 ?)
+          iatom= 1: plot atoms
+                 0: plot no atoms
+          iwxy : give 1 to output x-y coordinate of plotted atoms
+                                  and bond length
+                 (if |job|=1, output x, y, z coordinates)
+          ldev : 1 B &amp; W display or printer, 2 color display or printer
+          inum : 1 plot atom number 0 no atom number
+          iarrow: 1 write arrow parallel to xe1 0 no arrow
+        *** xe1 should be the vector normal to n-fold axis (n=8,10,12)***
+    ************if job=1 or job=-1 geve (12') else skip (12')*****
+      (12')  iel0
+                 element number in periodic table for iel 1,2,..ne
+    **************if(icase is not equal to 5, skip (13)************
+      (13) q3,q2      (six-dimensional vector specifying directions)
+           q3: z-axis (projection axis)
+           q2: y axis
+             0,1,1,0,0,0    x-axis in cubic approximant
+             1,0,0,0,1,0    y-axis in cubic approximant
+             0,0,0,-1,0,1   z-axis in cubic approximant
+    **************************************************************
+       ********if iatom=0 skip (14) *******
+      (14) icntsm
+          icntsm(i) i=1,ne : center symbol coresponding to ien
+                 0: sphere
+                 1: sphere
+                 2: triangle
+                 3: square
+                 4: pentagon
+                 5: star
+      (15) amag
+          amag:  magnification  (cm/angstrom)
+      (15_1) x0o
+          x0o:  6D coordinate of origin (-0.5&lt;orign(i)&lt;0.5)
+      (15_2) x0e
+          x0e:  6d coordinate its external part is added to x0o
+      (15_3) x0i
+          x0i:  6d coordinate its internal part is added to x0o+x0e
+
+          when brv='s', give x0,x0e,x0i in the fundamental cell
+                with the lattice constant a0=a/2.
+          origin = x0o+x0e+x0i
+
+               ****if job =2 then
+      (16) xmin,xmax,ymin,ymax,zmin,zmax,shiftx,shifty
+          xmin-xmax: view area in angstrom
+          ymin-ymax: view area in angstrom
+          zmin-zmax: view area in angstrom
+          shiftx: shift before plot in cm
+                  default max(2,-xmin*amag+2)
+          shifty: shift before plot in cm
+                  default max(2,-ymin*amag+2)
+               ****if job =2 then
+      (16) dmin, dmax
+          dmin : minimum interatomic distances to be calculated
+          dmax : maximum interatomic distances
+
+      (17) ncp      (ncp &lt;= 20)
+           ncp: number of atoms with concave parts in the occupation do
+
+            ***** if ncp=0 skip (18)
+      (18) npart atm
+           npart : number of concave parts (with a negative occupation
+                   probability) of the occupation domains of
+                   the atom specified by atm0
+           atm : atom number with positive occupation probabilities
+                 followed by (npart) related atoms with negative occupa
+                 probabilities
+               ***** repeat (18) ncp times *****
+
+ **********if job=0 or +-1 then (19)-(23)
+      (19) raplt
+          raplt(1)-raplt(ne): radus of elements
+      (20) icolor : color of ne elements
+                   lightness=0 or a means black or white
+                   satulation=0 means gray
+                   background color =10  white
+                   black  = 1
+                   white  =10
+                   gray           ( 1- 9)
+                   blue   =15     (11-19)
+                   magenta=45     (41-29)
+                   red    =75     (71-39)
+                   yellow =105    (101-109)
+                   green  =135    (131-139)
+                   cyan   =165    (161-169)
+
+      (21) nbond
+          different kinds of bonds   (&lt;=10)
+      (22) ie1, ie2, bmin, bmax, bcol, bwdt, klin
+          ie1,ie2: element pair to be joined by a bond
+          bmin: minimum length of a bond  in angstrom
+          bmax: maximum length of a bond  in angstrom
+          bcol: bond color
+          bdwt: bond width
+          klin: kind of lines  0: bold, 1: dashed 2: dotted
+             ******bond length affected by isim******
+             repeat (22) nbond times
+      (23) nsl,no1,no2
+          nsl: number of slices upward and downward
+               along the projection axis
+          no1-th to no2-th slices are calculated (default: all
+                         slices are calculated)
+          **** if job = +-1 skip (24) ****
+      (24) flnm5
+          file name of xyz file for the output of x,y,z coordinates of
+
+</PRE><!--CUT END -->
+<!--HTMLFOOT-->
+<!--ENDHTML-->
+<!--FOOTER-->
+<HR SIZE=2><BLOCKQUOTE CLASS="quote"><EM>This document was translated from L<sup>A</sup>T<sub>E</sub>X by
+</EM><A HREF="http://hevea.inria.fr/index.html"><EM>H</EM><EM><FONT SIZE=2><sup>E</sup></FONT></EM><EM>V</EM><EM><FONT SIZE=2><sup>E</sup></FONT></EM><EM>A</EM></A><EM>.</EM></BLOCKQUOTE></BODY>
+</HTML>

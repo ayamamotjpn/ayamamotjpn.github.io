@@ -1,0 +1,177 @@
+<title>Wellcome to Aperiodic Crystals</title>
+
+<h1>Akiji Yamamoto's Home Page</h1>
+
+ <i> Emeritus Fellow National Institute for Materials Science, Tsukuba, 305, Japan</i><p>
+
+This is the guide for tables and programs for modulated and
+quasicrystal structure analyses, which are downloadable via web
+(http://wcp-ap.hokudai.ac.jp/yamamoto/).<p> <p> The source codes of all the programs listed
+below are available. Most codes are written in fortran 90 but
+small parts are written in C++. Binary files included in a package were
+compiled by GNU compiler gfortran and g++ for Linux and Mac, while
+g95 and g++ for Windows.
+Source codes can be compiled by the same compilers
+in Linux, Mac and Windows under MSYS and MinGW. You may need to
+compile the source codes due to the inconsistent library version
+or any other reasons. Then edit makefile in the top directory directly
+so as to choose your OS (one of ARC = 86 for
+Linux, 86_64 for 64bit Linux, mac for Mac,  win for Windows).
+(In the makefile, characters after # in each line are regarded as a comment.)
+Then "make" command typed at the top directory
+will create new binary files for your operating system in bin_86,
+bin_86_64, bin_mac or
+bin_win depending on the chosen OS.
+(In Windows gfortran or g95 may not be installed. 
+Install one of them and choose a compiler by
+FC = gfortran or FC = g95 in the makefile.) Each (source) package
+includes "help" directory, in which there are html files for the input
+data instruction.
+<p>
+<b>For Windows users.</b> It is convenient to
+install packages under the home directory in msys.
+MSYS provides a minimum Unix environment under Windows OS and the
+terminal emulator in MSYS is better than "command prompt" included
+in Windows. (Any other compilers for Windows are available in Windows OS but
+then you may need a completely different makefile. Note that the
+current installation procedure
+is applicable only under the use of MSYS and
+MinGW in Windows OS.)
+<p>
+ After installing each package, you
+need to set an enviroment variable CLCMPPATH, which is the
+location (path) of "gprim.ps" file. This is included at the top directory in each package.
+If you install several packages, you can specify one location
+of the "gprim.ps" file. Add also the path of binary files (bin_86,
+bin_win or bin_mac) in each package 
+in the PATH environment variable. (Use control
+panel in Windows, while in Linux or Mac, you can edit .bash_profile
+or .cshrc in your home directory depending on the shell you use.)
+<p>
+ All the programs are terminal_based, so
+that you need terminal emulators even in Windows OS. In a terminal
+emulator, you can use all the program except for <b>extrhkl</b> by typing
+a command name followed by "< standard_input_file". The standard_input
+file should includes all the necessary informations for a program. (The
+symbol "<" is necessary between the command name and standard
+input file name.) For the data format of the standard_input_file
+for each programs, see the help file with the program name.
+The program <b>extrhkl</b> needs no standard
+input file. Just type the command name and reply to questions shown
+in the terminal. 
+<p>
+
+<h1> Programs for Quasicrystal Structure Analyses</h1>
+<ul>
+<li> <b>lodemac</b>:  the direct method for aperiodic crystals
+<li> <b>qcdiff</b>: the structure refinement of quasicrystals
+<li> <b>qcstrc</b>: the atom positions of quasicrystals in the external space
+<li> <b>qcmem</b>:  a drawing program of Fourier and MEM maps
+<li> <b>polygn</b>: a drawing program of ODs for polygonal quasicrystals
+<li> <b>polyhd</b>: a drawing program of ODs for icosahedral quasicrystals
+<li> <b>pltint</b>: a program for drawing F_o-F_c, q^e-F_o or q^i-F_c diagrams
+<li> <b>cluster</b>:a drawing program of clusters in quasicrystals
+<li> <b>extrhkl</b>: a program for extracting the most probable result from the output of lodemac
+<li> <b>diffptn</b>:a program for simulating diffraction patterns of aperiodic crystals\\
+<li> <b>lphason</b>:a program for calculating linear phason strain components of approximants
+<li> <b>iatom</b>: a program extracting independent atom positions of crystalline approximants
+</ul>
+For publications using these programs except for lodemac,  Akiji Yamamoto,<i>Sci. Tech.  Adv. Mat.</i>. 9, (2008) 013001 (for downloading, press
+<a href="http://stacks.iop.org/1468-6996/9/013001"><b>here</b></a>)should be cited.<br>
+For lodemac, H. Takakura et al,<i>Phys. Rev. Lett.</i> 86 (2001) 236-239
+should be cited.(Last modified Mar. 17, 2008) The lowdemac is applicable to
+any kind of aperiodic crystals including modulated, composite, crystallographic shear structures and quasicrystals.<p>
+<p>
+
+<p>
+ For downloading source files, press <a href="QUASI07_08_f90.tgz"><b>download QUASI07_08_f90.tgz</b></a>
+(Last modified Apr. 24, 2009)<br>
+For downloading source files, press <a href="QUASI07_08_f90_2.1.tgz"><b>download QUASI07_08_f90_2.1.tgz</b></a>
+(Last modified Nov. 21, 2022)<br>
+ For downlading new help file for qcstrc02_3, press <a href="qcstrc02.html"><b>download qcstrc02.html</a></b><br>
+
+(Last modified Apr. 30, 2010)</b>.<br>
+In QUASI07_08_f90.tgz, there are example input files for all programs but extrhkl, so the example file of extrhkl is now added.
+Please <a href="inputdata_new.tgz"><b>download inputdata_new.tgz</b></a>.(Last modified Aug. 15, 2022)<br>
+
+<h1> Programs for Modulated Structure Analyses</h1>
+<ul>
+<li> <b>remos</b>: leastsquares program for the refinement of modulated structures for a single crystal.
+<li> <b>premos</b>: the powder version of remos.
+<li> <b>modplt</b>: a program for plotting modulation functions.
+<li> <b>prjms</b>: a program for plotting modulated structure in 3D space.
+</ul>
+<p>
+<p>
+For downloading source files, press <a href="REMOS95.1_3.tgz"><b>download REMOS95.1_3.tgz</a></b><br>
+(Last modified Oct. 31, 2007),<br>
+For publications using these programs, the following
+paper should be cited. Akiji Yamamoto,<i>Acta Crystallogr</i>. A38, 87-92,
+(1982).
+<p>
+
+<h1> New Programs for Modulated Structure Analyses</h1>
+<ul>
+<li> <b>remos</b>: leastsquares program for the refinement of modulated structures for a single crystal.
+<li> <b>premos</b>: the powder version of remos.
+<li> <b>prjms</b>: a progra:m for plotting modulated structure in 3D space.
+<li> <b>mem</b>:  a drawing program of Fourier and MEM maps
+<li> <b>lodemac</b>:  the direct method for aperiodic crystals
+</ul>
+<p>
+
+The new version of the above package automatically calculates constraint conditions
+for special positions, which are imposed by the site symmetry of each
+atoms and in some cases they are very complicated. This can not however impose additional
+ fictitious constraint conditions.
+
+<p>
+For downloading source files, press <a href="REMOS2k_f90.tgz"><b>download REMOS2k_f90.tgz(beta version)</a></b><br>
+(Last modified Feb. 20, 2008)
+
+Last modified Oct. 30, 2007)</a></b>,<br>
+For compiling source codes, I recommend to use intel compiler in Linux.
+Then you need to modify makefiles. FC=gfortran and CC=g++ (if any) should be replaced
+by FC=ifort and FC=icc (in Windows, FC=g95 and CC=g++), respectively After that, "make clean" and "make" will
+create binary files. (For the use of gfortran and g++, use -O0 (optimize) option in COPT=,  FCOPT=
+ etc. Currently, the use of -O1, -O2, or -O3 option in gnu fortran and c++ may not work because of unknown reasons.)
+
+For publications using the new version programs except for lodemac,
+the following papers should be cited.
+ Akiji Yamamoto,<i>Acta Crystallogr</i>. A38, 87-92,
+(1982), Akiji Yamamoto, <i>Ferroelectrics</i> 250 (2001) 139-142.
+The program <b>lodemac</b> included in this package is the same as in
+QUASI07_08.tgz, so that the paper mentioned before should be cited.
+<p>
+ <h1> New program for diffuse scattering analysis for crystals and quasicrystals.</h1> <p>
+
+  This program calculates short-range-order diffuse scattering intensities of
+quasicrystals and crystals based on theories proposed in 
+Acta Cryst. A66 (2010) 372-383 and Acta Cryst. A66 (2010) 384-393
+one of which is applied to b-Ni and S1 phases in Phys. Rev. B83 (2011) 184203.
+
+For downloading source files, press <a href="Diffuse11.tgz"><b>download Diffuse11.tgz</b></a>
+(Last modified Oct. 20, 2011)<br>
+
+For publications using this program, one of the above papers should be cited.<br>
+
+<p>
+ <h1> Superspace groups for 1D, 2D and 3D Modulated Structures.</h1> <p>
+
+  <a href="spgr.html"><b>Superspace Group Tables </b></a>
+<p>
+
+
+<p>
+ <h1> Wyckoff positions of quasicrystal space groups.</h1> <p>
+
+  <a href="wyckoff/wyckoff.html"><b>Wyckoff positions of icosahedral QC </b></a><br>
+  <a href="wyckoff/wyckoff1_html.html"><b>Wyckoff positions of the maximum subgroups of icosahedral QC </b></a><br>
+  <a href="wyckoff/wyckoff2.html"><b>Wyckoff positions of decagonall QC </b></a><br>
+  <a href="wyckoff/wyckoff3.html"><b>Wyckoff positions of dodecagonal QC </b></a><br>
+  <a href="wyckoff/wyckoff4.html"><b>Wyckoff positions of octagonal QC </b></a><br>
+<p>
+
+<b>email:  </b><a href=mailto:yamamoto.akiji@emeritus.nims.go.jp>yamamoto.akiji@nims.go.jp</a>
+
+<p>

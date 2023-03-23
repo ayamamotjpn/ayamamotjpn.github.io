@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<meta name="generator" content="hevea 2.35">
+<style type="text/css">
+.equationcontainer{position:relative;}
+.equationnumber{float:right;left:auto;position:absolute;right:0}
+.equationnumber-valign{float:right;left:auto;position:absolute;right:0;margin-top:-0.5em;}
+.floatrule{background-color: black; border: none; height: 1px; width: 80%}
+.phantom{display: inline-block; visibility: hidden}
+.hphantom{display: inline-block; height: 0; visibility: hidden}
+.vphantom{display: inline-block; visibility: hidden; width: 0}
+.smash{display: inline-block; height: 0; line-height: 0}
+.li-itemize{margin:1ex 0ex;}
+.li-enumerate{margin:1ex 0ex;}
+.dd-description{margin:0ex 0ex 1ex 4ex;}
+.dt-description{margin:0ex;}
+.toc{list-style:none;}
+.footnotetext{margin:0ex; padding:0ex;}
+div.footnotetext P{margin:0px; text-indent:1em;}
+.thefootnotes{text-align:left;margin:0ex;}
+.dt-thefootnotes{margin:0em;}
+.dd-thefootnotes{margin:0em 0em 0em 2em;}
+.footnoterule{background-color: black; border: none; height: 1px; margin: 1em auto 1em 0px; width: 40%}
+.caption{padding-left:2ex; padding-right:2ex; margin-left:auto; margin-right:auto}
+.title{margin:2ex auto;text-align:center}
+.titlemain{margin:1ex 2ex 2ex 1ex;}
+.titlerest{margin:0ex 2ex;}
+.center{text-align:center;margin-left:auto;margin-right:auto;}
+.flushleft{text-align:left;margin-left:0ex;margin-right:auto;}
+.flushright{text-align:right;margin-left:auto;margin-right:0ex;}
+div table{margin-left:inherit;margin-right:inherit;margin-bottom:2px;margin-top:2px}
+td table{margin:auto;}
+table{border-collapse:collapse;}
+td{padding:0;}
+.cellpadding0 tr td{padding:0;}
+.cellpadding1 tr td{padding:1px;}
+pre{text-align:left;margin-left:0ex;margin-right:auto;}
+blockquote{margin-left:4ex;margin-right:4ex;text-align:left;}
+td p{margin:0px;}
+.quote{margin-left:3em;margin-right:3em;text-align:inherit;text-indent:0pt}
+.quotation{margin-left:3em;margin-right:3em;text-align:inherit;text-indent:1.5em}
+.verse{margin-left:3em;margin-right:3em;text-indent:1.5em hanging each-line}
+.parbox{box-sizing: border-box;
+display: inline-block;
+text-indent: 0;
+}
+.rule-rect{fill: black;}
+.lrbox{box-sizing:border-box;display:inline-block;overflow:visible;white-space:nowrap;}
+.center-lrbox{display:inline-block;margin-left:50%;transform:translateX(-50%);}
+.makebox{}
+.framebox{border:1px solid black;padding:0.25em;}
+.vertical-rule{border:none;width:2px;background-color:black;}
+.horizontal-rule{border:none;background-color:black;}
+.hrule{border:none;height:2px;width:100%;background-color:black;}
+.hfill{border:none;height:1px;width:200%;background-color:black;}
+.vdisplay{border-collapse:separate;border-spacing:2px;line-height:1.1;width:auto; empty-cells:show; border:2px solid red;}
+.vdcell{white-space:nowrap;padding:0px; border:2px solid green;}
+.display{border-collapse:separate;border-spacing:2px;line-height:1.1;width:auto; border:none;}
+.dcell{white-space:nowrap;padding:0px; border:none;}
+.dcenter{margin:0ex auto;}
+.vdcenter{border:solid #FF8000 2px; margin:0ex auto;}
+.minipage{text-align:left; margin-left:0em; margin-right:auto;}
+.marginpar{border:solid thin black; margin-bottom:1ex; width:20%; text-align:left;}
+.marginparleft{float:left; clear:left; margin-left:0ex; margin-right:1ex;}
+.marginparright{float:right; clear:right; margin-left:1ex; margin-right:0ex;}
+.theorem{text-align:left;margin:1ex auto 1ex 0ex;}
+.part{margin:2ex auto;text-align:center}
+</style>
+<title>Wyckoff positions of icosahedral space groups and their applications
+</title>
+</head>
+<body >
+<!--HEVEA command line is: hevea article.hva -fix wyckoff.tex -->
+<!--CUT STYLE article--><!--CUT DEF section 1 --><p>AkijiYamamotoYAMAMOTO.Akiji@nims.go.jp
+National Institute for Materials Science, Tsukuba, Ibaraki, 305, Japan</p><table class="title"><tr><td style="padding:1ex"><h1 class="titlemain">Wyckoff positions of icosahedral space groups and their applications</h1></td></tr>
+</table><p>
+Wyckoff positions and their representative coordinates of icosahedral
+space groups and their applications are given.
+</p><blockquote class="abstract"><span style="font-weight:bold">Abstract:</span> 
+Wyckoff positions of all icosahedral space groups, which are important
+for model building and refinement of the icosahedral quasicrystals are
+given. Several applications of the Wyckoff positions are
+demonstrated. The orbits of Wyckoff positions are available in the
+web site (http://wcp2-ap.eng.hokudai.ac.jp/yamamoto/)
+</blockquote>
+<!--TOC section id="sec1" Introduction-->
+<h2 id="sec1" class="section">1&#X2003;Introduction</h2><!--SEC END --><p>Occupation domain (OD) positions in quasicrystals play an essential
+role for describing and determining quasicrystal structures as same as
+the role of atom positions in conventional
+crystals.[<a href="#Yamamoto%281996b%29">14</a>] They are classified by the point
+symmetry into groups, which are known as Wyckoff positions. This is
+necessary for model building of quasicrystals, since the point
+symmetry restricts the shape of the OD. In the structure refinement
+program <span style="font-style:italic">qcdiff</span> written by the author therefore, the site symmetry is
+calculated from the OD position. Other two examples of the use of
+Wyckoff positions are shown.</p><p>In icosahedral quasicrystals found so far, the space groups were
+symmorphic. However, icosahedral quasicrystals with non-symmorphic
+space group may exist as in decagonal quasicrystals. There are five
+non-symmorphic space groups among eleven icosahedral
+ones.[<a href="#Janssen%281986%29">6</a>, <a href="#Rokhsar%281988%29">11</a>, <a href="#Levitov%281988%29">9</a>] For
+non-symmorphic space groups, the calculations of the Wyckoff positions
+are not easy in general. The table of all Wyckoff positions has not be
+given, although limited Wyckoff positions of symmorphic space groups
+in the reciprocal lattice are calculated for electronic structures of
+quasicrystals.[<a href="#Niizeki%281989c%29">10</a>] There exists a computer program,
+Carat, for calculating Wyckoff positions of space groups which is
+implemented in the computer algebra system GAP.[<a href="#Eick%281997%29">1</a>]
+(http://www.gap-system.org/Packages/Cryst) This enables us to derive
+all non-equivalent icosahedral space groups and their Wyckoff
+positions.</p><p>In ths paper, Wyckoff positions together with their symbols and site
+symmety of all (eleven) icosahedral space groups in the six
+dimensional (6D) space are shown and their applications are demonstrated.</p>
+<!--TOC section id="sec2" Calculation Method-->
+<h2 id="sec2" class="section">2&#X2003;Calculation Method</h2><!--SEC END --><p>The program Carat requires <span style="font-style:italic">n</span>&#XD7; <span style="font-style:italic">n</span> matrix representations of the
+generators of a point group for <span style="font-style:italic">nD</span> space groups. The matrices are
+(3+<span style="font-style:italic">d</span>) reducible (<span style="font-style:italic">d</span>=<span style="font-style:italic">n</span>&#X2212;3) for <span style="font-style:italic">nD</span> (<span style="font-style:italic">n</span>=5 or 6) point groups of
+quasicrystals. The point group is a semi-direct product of the 3D and
+<span style="font-style:italic">dD</span> point groups, so that they are isomorphic to a 3<span style="font-style:italic">D</span> point group.
+The latter is generated by at most three generators. As a result, the <span style="font-style:italic">nD</span>
+point group is generated by the same number of generators. When the
+point group <span style="font-style:italic">G</span> is centrosymmetric, we choose generators of its
+non-centrosymmetric factor group <span style="font-style:italic">G</span>/<span style="font-style:italic">I</span> and inversion as the generators
+of the point group. Then number of generators is at most four. As the
+generators of the 3<span style="font-style:italic">D</span> point groups, we can choose one 2-fold rotation
+and one or two <span style="font-style:italic">p</span>-fold rotation with <span style="font-style:italic">p</span>&gt;2 point group and inversion
+for centrosymmetric groups, while for non-centrosymmetric one, one
+merror or 2-fold rotation and one or two <span style="font-style:italic">p</span>-fold rotation or
+rote-inversion.</p><p>The icosahedral point group
+<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>) is a point
+group with the highest symmetry, the order of which is 120. It is
+generated by 2-fold, 3-fold and 5-fold rotation and inversion. They
+are given by &#X2212;<span style="font-style:italic">x</span>,&#X2212;<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">w</span>,&#X2212;<span style="font-style:italic">v</span>,&#X2212;<span style="font-style:italic">u</span>,&#X2212;<span style="font-style:italic">z</span>;
+<span style="font-style:italic">y</span>,<span style="font-style:italic">z</span>,<span style="font-style:italic">x</span>,<span style="font-style:italic">w</span>,&#X2212;<span style="font-style:italic">u</span>,&#X2212;<span style="font-style:italic">v</span>; <span style="font-style:italic">x</span>,<span style="font-style:italic">w</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">z</span>,<span style="font-style:italic">u</span>,<span style="font-style:italic">v</span> and &#X2212;<span style="font-style:italic">x</span>,&#X2212;<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">z</span>,&#X2212;<span style="font-style:italic">u</span>,&#X2212;<span style="font-style:italic">v</span>,&#X2212;<span style="font-style:italic">w</span>
+in the international table (IT) format.[<a href="#Hahn%282002%29">4</a>] They are
+written as {<span style="font-style:italic">R</span><sub>21</sub>|&#X3C4;<sub>0</sub>}, {<span style="font-style:italic">R</span><sub>31</sub>|&#X3C4;<sub>0</sub>},
+{<span style="font-style:italic">R</span><sub>51</sub>|&#X3C4;<sub>0</sub>} and {<span style="font-style:italic">I</span>|&#X3C4;<sub>0</sub>}, where &#X3C4;<sub>0</sub> is the 6D zero
+vector. For the face- and body-centered lattices, the basis
+vectors of their reciprocal lattice <span style="font-weight:bold"><span style="font-style:italic">d</span></span><sub><span style="font-style:italic">i</span></sub><sup>&#X2032; *</sup> are given
+by <span style="font-weight:bold"><span style="font-style:italic">d</span></span><sub><span style="font-style:italic">i</span></sub><sup>&#X2032; *</sup>=&#X2211;<sub><span style="font-style:italic">j</span>=1</sub><sup>6</sup><span style="font-weight:bold"><span style="font-style:italic">d</span></span><sub><span style="font-style:italic">j</span></sub><sup>*</sup>(<span style="font-style:italic">S</span><sub><span style="font-style:italic">k</span></sub>)<sub><span style="font-style:italic">ji</span></sub> (<span style="font-style:italic">k</span>=1,2)
+in terms of those in the primitive lattice <span style="font-weight:bold"><span style="font-style:italic">d</span></span><sub><span style="font-style:italic">j</span></sub><sup>*</sup>, where <span style="font-style:italic">S</span><sub><span style="font-style:italic">k</span></sub> is
+given by[<a href="#Janssen%281986%29">6</a>]</p><div class="equationcontainer"><table class="display dcenter"><tr style="vertical-align:middle"><td class="dcell">
+
+
+&#X2004;&#X2004;&#X2004;&#X2004;&#X2004;
+
+</td><td class="dcell"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:right;white-space:nowrap" ><table class="display"><tr style="vertical-align:middle"><td class="dcell"><span style="font-style:italic">S</span><sub>1</sub>=</td><td class="dcell">&#X239B;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239D;</td><td class="dcell"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1</td></tr>
+</table></td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1</td></tr>
+</table></td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >1</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >2</td><td style="text-align:right;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1</td></tr>
+</table></td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >1</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1</td></tr>
+</table></td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1</td></tr>
+</table></td><td style="text-align:right;white-space:nowrap" >2</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >1</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1</td></tr>
+</table></td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1</td></tr>
+</table></td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >2</td><td style="text-align:right;white-space:nowrap" >1</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1</td></tr>
+</table></td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >1</td></tr>
+</table></td><td class="dcell">&#X239E;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X23A0;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" ><span class="equationnumber-valign">(1)</span></td></tr>
+</table></td></tr>
+</table></div><p>and</p><div class="equationcontainer"><table class="display dcenter"><tr style="vertical-align:middle"><td class="dcell">
+
+
+&#X2004;&#X2004;&#X2004;&#X2004;&#X2004;
+
+</td><td class="dcell"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:right;white-space:nowrap" ><table class="display"><tr style="vertical-align:middle"><td class="dcell"><span style="font-style:italic">S</span><sub>2</sub>=</td><td class="dcell">&#X239B;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239D;</td><td class="dcell"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >1</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >0</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >1</td></tr>
+</table></td><td class="dcell">&#X239E;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X23A0;</td><td class="dcell">.</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" ><span class="equationnumber-valign">(2)</span></td></tr>
+</table></td></tr>
+</table></div><p>The determinants of <span style="font-style:italic">S</span><sub>1</sub> and <span style="font-style:italic">S</span><sub>2</sub> are
+32 and 2 respectively. Their inverse matrices are
+given by</p><div class="equationcontainer"><table class="display dcenter"><tr style="vertical-align:middle"><td class="dcell">
+
+
+&#X2004;&#X2004;&#X2004;&#X2004;&#X2004;
+
+</td><td class="dcell"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:right;white-space:nowrap" ><table class="display"><tr style="vertical-align:middle"><td class="dcell"><span style="font-style:italic">S</span><sub>1</sub><sup>&#X2212;1</sup>=</td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:center">1</td></tr>
+<tr><td class="hrule"></td></tr>
+<tr><td class="dcell" style="text-align:center">2</td></tr>
+</table></td><td class="dcell">
+</td><td class="dcell">&#X239B;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239D;</td><td class="dcell"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >1</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >1</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >1
+</td></tr>
+</table></td><td class="dcell">&#X239E;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X23A0;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" ><span class="equationnumber-valign">(3)</span></td></tr>
+</table></td></tr>
+</table></div><p>and</p><div class="equationcontainer"><table class="display dcenter"><tr style="vertical-align:middle"><td class="dcell">
+
+
+&#X2004;&#X2004;&#X2004;&#X2004;&#X2004;
+
+</td><td class="dcell"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:right;white-space:nowrap" ><table class="display"><tr style="vertical-align:middle"><td class="dcell"><span style="font-style:italic">S</span><sub>2</sub><sup>&#X2212;1</sup>=</td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:center">1</td></tr>
+<tr><td class="hrule"></td></tr>
+<tr><td class="dcell" style="text-align:center">2</td></tr>
+</table></td><td class="dcell">
+</td><td class="dcell">&#X239B;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239D;</td><td class="dcell"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1</td></tr>
+</table></td><td style="text-align:right;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1</td></tr>
+</table></td><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1</td></tr>
+</table></td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >2</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1</td></tr>
+</table></td><td style="text-align:right;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1</td></tr>
+</table></td><td style="text-align:right;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1</td></tr>
+</table></td><td style="text-align:right;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1</td></tr>
+</table></td><td style="text-align:right;white-space:nowrap" >1</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >2</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >0</td><td style="text-align:right;white-space:nowrap" >2</td><td style="text-align:right;white-space:nowrap" >0</td></tr>
+<tr><td style="text-align:right;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1</td></tr>
+</table></td><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" >1</td><td style="text-align:right;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1</td></tr>
+</table></td><td style="text-align:right;white-space:nowrap" >1
+</td></tr>
+</table></td><td class="dcell">&#X239E;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X23A0;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" ><span class="equationnumber-valign">(4)</span></td></tr>
+</table></td></tr>
+</table></div><p>Then the coordinates, basis vectors in the (direct) lattice
+and matrix representation of the symmetry operations are given by
+<span style="font-style:italic">x</span><sub><span style="font-style:italic">i</span></sub><sup>&#X2032;</sup>=&#X2211;<sub><span style="font-style:italic">j</span>=1</sub><sup>6</sup> <span style="font-style:italic">x</span><sub><span style="font-style:italic">j</span></sub>(<span style="font-style:italic">S</span><sub><span style="font-style:italic">k</span></sub>)<sub><span style="font-style:italic">ji</span></sub>, <span style="font-weight:bold"><span style="font-style:italic">d</span></span><sub><span style="font-style:italic">i</span></sub><sup>&#X2032;</sup>=&#X2211;<sub><span style="font-style:italic">j</span>=1</sub><sup>6</sup> (<span style="font-style:italic">S</span><sub><span style="font-style:italic">k</span></sub><sup>&#X2212;1</sup>)<sub><span style="font-style:italic">ij</span></sub><span style="font-weight:bold"><span style="font-style:italic">d</span></span><sub><span style="font-style:italic">j</span></sub> and
+<span style="font-style:italic">R</span><sub><span style="font-style:italic">ij</span></sub><sup>&#X2032;</sup>=&#X2211;<sub><span style="font-style:italic">l</span>=1</sub><sup>6</sup>
+(<span style="font-style:italic">S</span><sub><span style="font-style:italic">k</span></sub><sup>&#X2212;1</sup>)<sub><span style="font-style:italic">il</span></sub><span style="font-style:italic">R</span><sub><span style="font-style:italic">lj</span></sub>(<span style="font-style:italic">S</span><sub><span style="font-style:italic">k</span></sub>)<sub><span style="font-style:italic">kj</span></sub>.[<a href="#Janssen%282002a%29">7</a>] Using the
+matrices <span style="font-style:italic">R</span> in the primitive lattice, the matrices <span style="font-style:italic">R</span><sup>&#X2032;</sup> for
+generators, which are required in Carat, are calculated and all the
+symmetry operators in the face-centered and body-centered icosahedral
+lattices are derived. The obtained Wyckoff position coordinates with
+respect to the basis <span style="font-weight:bold"><span style="font-style:italic">d</span></span><sub><span style="font-style:italic">i</span></sub><sup>&#X2032;</sup> are converted into those in
+the primitive lattice system <span style="font-weight:bold"><span style="font-style:italic">d</span></span><sub><span style="font-style:italic">i</span></sub> by <span style="font-style:italic">x</span><sub><span style="font-style:italic">i</span></sub>=&#X2211;<sub><span style="font-style:italic">j</span>=1</sub><sup>6</sup>
+<span style="font-style:italic">x</span><sub><span style="font-style:italic">j</span></sub><sup>&#X2032;</sup>(<span style="font-style:italic">S</span><sub><span style="font-style:italic">k</span></sub><sup>&#X2212;1</sup>)<sub><span style="font-style:italic">ji</span></sub>. In non-symmorphic space groups, the
+non-primitive translation vector coordinates with respect to <span style="font-weight:bold"><span style="font-style:italic">d</span></span><sub><span style="font-style:italic">j</span></sub><sup>&#X2032;</sup>, which are given by Carat, should also be transformed
+by this. Thus the symmetry operators and the Wyckoff positions
+in a centered lattice are calculated.</p>
+<!--TOC section id="sec3" Wyckoff Positions-->
+<h2 id="sec3" class="section">3&#X2003;Wyckoff Positions</h2><!--SEC END --><p>There are 11 non-equivalent space groups in the icosahedral lattice in
+6D space. We write them as
+<span style="font-style:italic">Fm</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>),
+<span style="font-style:italic">Fm</span><sub><span style="font-style:italic">xy</span></sub><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>),
+<span style="font-style:italic">Im</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>),
+<span style="font-style:italic">Pm</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>),
+<span style="font-style:italic">Pm</span><sub><span style="font-style:italic">xy</span></sub><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>),
+<span style="font-style:italic">F</span>235(235<sup>2</sup>), <span style="font-style:italic">F</span>235<sub>1</sub>(235<sup>2</sup>), <span style="font-style:italic">I</span>235(235<sup>2</sup>), <span style="font-style:italic">I</span>235<sub>1</sub>(235<sup>2</sup>),
+<span style="font-style:italic">P</span>235(235<sup>2</sup>), and <span style="font-style:italic">P</span>235<sub>1</sub>(235<sup>2</sup>). They are quite similar to the
+symbols recommended by the IUCr[<a href="#Janssen%282002a%29">7</a>] except that the
+order of the generators are inverted, so as to be consistent with the
+cubic space group symbols in 3D space. (Note that in the latter,
+<span style="font-style:italic">Pm</span><span style="text-decoration:overline">3</span> represents a cubic space group, while
+<span style="font-style:italic">P</span><span style="text-decoration:overline">3</span><span style="font-style:italic">m</span> stands for trigonal one.) In alternative symbols,
+the first one is also written as <span style="font-style:italic">F</span><span style="text-decoration:overline">53</span><span style="font-style:italic">m</span>,
+<span style="font-style:italic">I</span><sup>*</sup><span style="text-decoration:overline">53</span><span style="font-style:italic">m</span>, or
+<span style="font-style:italic">F</span><span style="text-decoration:overline">5</span><span style="text-decoration:overline">3</span><span style="font-style:italic">m</span>(<span style="text-decoration:overline">5</span><sup>2</sup><span style="text-decoration:overline">3</span><span style="font-style:italic">m</span>).[<a href="#Janssen%281986%29">6</a>, <a href="#Rokhsar%281988%29">11</a>, <a href="#Janssen%282002a%29">7</a>])
+The orders of the centrosymmetric and
+non-centrosymmetric
+point groups are 120 and 60, respectively. The
+corresponding space groups are generated by four or three
+generators together with six generators for the lattice
+translations. (See Table 1.) The Wyckoff potions, their site symmetry
+and representative coordinates of the Wyckoff position are given in
+Tables 2-7.<br>
+
+</p><blockquote class="table"><div class="center"><hr class="floatrule"></div>
+<div class="caption"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="vertical-align:top;text-align:left;" >Table 1: The generators of the icosahedral space groups (excluding
+those for lattice translations) employed in Tables
+2-7. [<span style="font-style:italic">R</span><sub>51</sub>&#X2261; <span style="font-style:italic">x</span>,<span style="font-style:italic">w</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">z</span>,<span style="font-style:italic">u</span>,<span style="font-style:italic">v</span>, <span style="font-style:italic">R</span><sub>31</sub>&#X2261; <span style="font-style:italic">y</span>,<span style="font-style:italic">z</span>,<span style="font-style:italic">x</span>,<span style="font-style:italic">w</span>,&#X2212;<span style="font-style:italic">u</span>,&#X2212;<span style="font-style:italic">v</span>,
+<span style="font-style:italic">R</span><sub>21</sub>&#X2261; &#X2212;<span style="font-style:italic">x</span>,&#X2212;<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">w</span>,&#X2212;<span style="font-style:italic">v</span>,&#X2212;<span style="font-style:italic">u</span>,&#X2212;<span style="font-style:italic">z</span>,
+<span style="font-style:italic">I</span>&#X2261; &#X2212;<span style="font-style:italic">x</span>,&#X2212;<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">z</span>,&#X2212;<span style="font-style:italic">u</span>,&#X2212;<span style="font-style:italic">v</span>,&#X2212;<span style="font-style:italic">w</span>,
+&#X3C4;<sub>0</sub>=(0,0,0,0,0,0),&#X3C4;<sub>1</sub>=(1,1,1,1,1,1)/2,
+&#X3C4;<sub>2</sub>=(3,1,1,1,1,3)/4, &#X3C4;<sub>3</sub>=(1,0,0,0,0,0)/5,
+&#X3C4;<sub>4</sub>=(0,1,4,2,3,1)/5, &#X3C4;<sub>5</sub>=(1,2,0,1,0,2)/10,
+&#X3C4;<sub>6</sub>=(7,6,2,2,2,5)/10, &#X3C4;<sub>7</sub>=(9,1,1,1,1,1,1)/10,
+&#X3C4;<sub>8</sub>=(1,9,0,3,5,2)/10,&#X3C4;<sub>9</sub>=(0,1,0,0,0,3)/4,&#X3C4;<sub>10</sub>=(3,0,1,1,3,2)/4.
+&#X3C4;<sub>11</sub>=(1,3,2,3,3,2)/4,&#X3C4;<sub>12</sub>=(0,0,0,0,1,1)/2]
+Note that
+the origin is not at the inversion center in <span style="font-style:italic">Fm</span><sub><span style="font-style:italic">xy</span></sub><span style="text-decoration:overline">3</span>5 and
+<span style="font-style:italic">Pm</span><sub><span style="font-style:italic">xy</span></sub><span style="text-decoration:overline">3</span>5. The glide planes {&#X3C3;<sub>21</sub>|&#X3C4;} in
+<span style="font-style:italic">Fm</span><sub><span style="font-style:italic">xy</span></sub><span style="text-decoration:overline">3</span>5 and <span style="font-style:italic">Pm</span><sub><span style="font-style:italic">xy</span></sub><span style="text-decoration:overline">3</span>5 are given by
+{<span style="font-style:italic">I</span>|&#X3C4;<sub>2</sub>}{<span style="font-style:italic">R</span><sub>21</sub>|&#X3C4;<sub>0</sub>} and
+{<span style="font-style:italic">I</span>|&#X3C4;<sub>1</sub>}{<span style="font-style:italic">R</span><sub>21</sub>|&#X3C4;<sub>0</sub>}, respectively. (&#X3C3;<sub>21</sub>&#X2261;
+<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">w</span>,<span style="font-style:italic">v</span>,<span style="font-style:italic">u</span>,<span style="font-style:italic">z</span>.) When the inversion is not on the origin in centrosymmetric
+space groups, the second setting is given where the origin is at the inversion.</td></tr>
+</table></div><div class="center"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:center;white-space:nowrap" >Space group</td><td style="text-align:left;white-space:nowrap" >generators</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">Fm</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>)</td><td style="text-align:left;white-space:nowrap" >{<span style="font-style:italic">R</span><sub>51</sub>|&#X3C4;<sub>0</sub>},{<span style="font-style:italic">R</span><sub>31</sub>|&#X3C4;<sub>0</sub>},{<span style="font-style:italic">R</span><sub>21</sub>|&#X3C4;<sub>0</sub>},{<span style="font-style:italic">I</span>|&#X3C4;<sub>0</sub>}</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">Fm</span><sub><span style="font-style:italic">xy</span></sub><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>)</td><td style="text-align:left;white-space:nowrap" >{<span style="font-style:italic">R</span><sub>51</sub>|&#X3C4;<sub>0</sub>},{<span style="font-style:italic">R</span><sub>31</sub>|&#X3C4;<sub>0</sub>},{<span style="font-style:italic">R</span><sub>21</sub>|&#X3C4;<sub>0</sub>},{<span style="font-style:italic">I</span>|&#X3C4;<sub>2</sub>}</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >(2nd setting)</td><td style="text-align:left;white-space:nowrap" >{<span style="font-style:italic">R</span><sub>51</sub>|&#X3C4;<sub>9</sub>},{<span style="font-style:italic">R</span><sub>31</sub>|&#X3C4;<sub>10</sub>},{<span style="font-style:italic">R</span><sub>21</sub>|&#X3C4;<sub>11</sub>},{<span style="font-style:italic">I</span>|&#X3C4;<sub>0</sub>}</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">Im</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>)</td><td style="text-align:left;white-space:nowrap" >{<span style="font-style:italic">R</span><sub>51</sub>|&#X3C4;<sub>0</sub>},{<span style="font-style:italic">R</span><sub>31</sub>|&#X3C4;<sub>0</sub>},{<span style="font-style:italic">R</span><sub>21</sub>|&#X3C4;<sub>0</sub>},{<span style="font-style:italic">I</span>|&#X3C4;<sub>0</sub>}</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">Pm</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>)</td><td style="text-align:left;white-space:nowrap" >{<span style="font-style:italic">R</span><sub>51</sub>|&#X3C4;<sub>0</sub>},{<span style="font-style:italic">R</span><sub>31</sub>|&#X3C4;<sub>0</sub>},{<span style="font-style:italic">R</span><sub>21</sub>|&#X3C4;<sub>0</sub>},{<span style="font-style:italic">I</span>|&#X3C4;<sub>0</sub>}</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">Pm</span><sub><span style="font-style:italic">xy</span></sub><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>)</td><td style="text-align:left;white-space:nowrap" >{<span style="font-style:italic">R</span><sub>51</sub>|&#X3C4;<sub>0</sub>},{<span style="font-style:italic">R</span><sub>31</sub>|&#X3C4;<sub>0</sub>},{<span style="font-style:italic">R</span><sub>21</sub>|&#X3C4;<sub>0</sub>},{<span style="font-style:italic">I</span>|&#X3C4;<sub>1</sub>}</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >(2nd setting)</td><td style="text-align:left;white-space:nowrap" >{<span style="font-style:italic">R</span><sub>51</sub>|&#X3C4;<sub>0</sub>},{<span style="font-style:italic">R</span><sub>31</sub>|&#X3C4;<sub>12</sub>},{<span style="font-style:italic">R</span><sub>21</sub>|&#X3C4;<sub>1</sub>},{<span style="font-style:italic">I</span>|&#X3C4;<sub>0</sub>}</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">F</span>235(235<sup>2</sup>)</td><td style="text-align:left;white-space:nowrap" >{<span style="font-style:italic">R</span><sub>51</sub>|&#X3C4;<sub>0</sub>},{<span style="font-style:italic">R</span><sub>31</sub>|&#X3C4;<sub>0</sub>},{<span style="font-style:italic">R</span><sub>21</sub>|&#X3C4;<sub>0</sub>}</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">F</span>235<sub>1</sub>(235<sup>2</sup>)</td><td style="text-align:left;white-space:nowrap" >{<span style="font-style:italic">R</span><sub>51</sub>|&#X3C4;<sub>5</sub>},{<span style="font-style:italic">R</span><sub>31</sub>|&#X3C4;<sub>6</sub>},{<span style="font-style:italic">R</span><sub>21</sub>|&#X3C4;<sub>0</sub>}</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">I</span>235(235<sup>2</sup>)</td><td style="text-align:left;white-space:nowrap" >{<span style="font-style:italic">R</span><sub>51</sub>|&#X3C4;<sub>0</sub>},{<span style="font-style:italic">R</span><sub>31</sub>|&#X3C4;<sub>0</sub>},{<span style="font-style:italic">R</span><sub>21</sub>|&#X3C4;<sub>0</sub>}</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">I</span>235<sub>1</sub>(235<sup>2</sup>)</td><td style="text-align:left;white-space:nowrap" >{<span style="font-style:italic">R</span><sub>51</sub>|&#X3C4;<sub>7</sub>},{<span style="font-style:italic">R</span><sub>31</sub>|&#X3C4;<sub>8</sub>},{<span style="font-style:italic">R</span><sub>21</sub>|&#X3C4;<sub>0</sub>}</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">P</span>235(235<sup>2</sup>)</td><td style="text-align:left;white-space:nowrap" >{<span style="font-style:italic">R</span><sub>51</sub>|&#X3C4;<sub>0</sub>},{<span style="font-style:italic">R</span><sub>31</sub>|&#X3C4;<sub>0</sub>},{<span style="font-style:italic">R</span><sub>21</sub>|&#X3C4;<sub>0</sub>}</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">P</span>235<sub>1</sub>(235<sup>2</sup>)</td><td style="text-align:left;white-space:nowrap" >{<span style="font-style:italic">R</span><sub>51</sub>|&#X3C4;<sub>3</sub>},{<span style="font-style:italic">R</span><sub>31</sub>|&#X3C4;<sub>4</sub>},{<span style="font-style:italic">R</span><sub>21</sub>|&#X3C4;<sub>0</sub>}</td></tr>
+</table></div><div class="center"><hr class="floatrule"></div></blockquote><blockquote class="table"><div class="center"><hr class="floatrule"></div>
+<div class="caption"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="vertical-align:top;text-align:left;" >Table 2:  The Wyckoff positions of the space group
+<span style="font-style:italic">Fm</span><span style="text-decoration:overline">3</span>5.
+The first column represents Wyckoff symbol (W.S.). The second and
+third columns denote the site symmetry and the representative
+coordinates, respectively. In the Wyckoff positions in the second
+setting in
+<span style="font-style:italic">Fm</span><sub><span style="font-style:italic">xy</span></sub><span style="text-decoration:overline">3</span>5(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span>5),
+&#X2212;&#X3C4;<sub>2</sub>/2 shown in Table 1 should be added to the coordinates.</td></tr>
+</table></div><div class="center"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:center;white-space:nowrap"  colspan=3><span style="font-style:italic">Fm</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >W.S.</td><td style="text-align:center;white-space:nowrap" >site symmetry</td><td style="text-align:center;white-space:nowrap" >coordinates</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 1<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>)</td><td style="text-align:center;white-space:nowrap" >(0,0,0,0,0,0)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 1<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>)</td><td style="text-align:center;white-space:nowrap" >(1,0,0,0,0,0)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 1<span style="font-style:italic">c</span></td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>)</td><td style="text-align:center;white-space:nowrap" >(1,1,1,1,1,1)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 1<span style="font-style:italic">d</span></td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>)</td><td style="text-align:center;white-space:nowrap" >(3,1,1,1,1,1)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 15<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">mmm</span>(<span style="font-style:italic">mmm</span>)</td><td style="text-align:center;white-space:nowrap" >(1,1,1,0,0,1)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 15<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">mmm</span>(<span style="font-style:italic">mmm</span>)</td><td style="text-align:center;white-space:nowrap" >(2,0,1,1,1,1)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 15<span style="font-style:italic">c</span></td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">mmm</span>(<span style="font-style:italic">mmm</span>)</td><td style="text-align:center;white-space:nowrap" >(2,0,1,0,0,1)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 15<span style="font-style:italic">d</span></td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">mmm</span>(<span style="font-style:italic">mmm</span>)</td><td style="text-align:center;white-space:nowrap" >(1,1,0,0,0,2)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 12<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >5<span style="font-style:italic">m</span>(5<sup>2</sup><span style="font-style:italic">m</span>)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 20<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >3<span style="font-style:italic">m</span>(3<span style="font-style:italic">m</span>)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 30<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >2<span style="font-style:italic">mm</span>(2<span style="font-style:italic">mm</span>)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,0,0,<span style="font-style:italic">y</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 30<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >2<span style="font-style:italic">mm</span>(2<span style="font-style:italic">mm</span>)</td><td style="text-align:center;white-space:nowrap" >(1/4+<span style="font-style:italic">x</span>,1/4+<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,1/4,1/4,1/2+<span style="font-style:italic">y</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 30<span style="font-style:italic">c</span></td><td style="text-align:center;white-space:nowrap" >2<span style="font-style:italic">mm</span>(2<span style="font-style:italic">mm</span>)</td><td style="text-align:center;white-space:nowrap" >(1/4+<span style="font-style:italic">x</span>,1/4+<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,0,0,1/2+<span style="font-style:italic">y</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 30<span style="font-style:italic">d</span></td><td style="text-align:center;white-space:nowrap" >2<span style="font-style:italic">mm</span>(2<span style="font-style:italic">mm</span>)</td><td style="text-align:center;white-space:nowrap" >(1/2+<span style="font-style:italic">x</span>,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,1/4,1/4,<span style="font-style:italic">y</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 60<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">m</span>(<span style="font-style:italic">m</span>)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>+<span style="font-style:italic">y</span>+<span style="font-style:italic">z</span>+<span style="font-style:italic">u</span>,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">u</span>,0,<span style="font-style:italic">z</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 120<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >1(1)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">z</span>,<span style="font-style:italic">u</span>,<span style="font-style:italic">v</span>,<span style="font-style:italic">w</span>)</td></tr>
+</table></div><div class="center"><hr class="floatrule"></div></blockquote><p>In the tables, we use the conventional lattice
+basis with the centering translations
+for the face-centered (<span style="font-style:italic">F</span>) and body-centered (<span style="font-style:italic">I</span>) lattices, although
+the the Wyckoff positions were calculated in different (primitive)
+basis. In the <span style="font-style:italic">I</span> and <span style="font-style:italic">F</span> lattices, 2 and 32 centering translations
+exist. The former is given by (0,0,0,0,0,0) and
+(1/2,1/2,1/2,1/2,1/2,1/2), while the latter includes the
+permutations of (1/2,1/2,0,0,0,0) and (0,0,1/2,1/2,1/2,1/2) in
+additions to the above two. The the conventional basis vectors are in
+parallel to 5-fold axes.[<a href="#Janssen%281986%29">6</a>, <a href="#Elser%281985a%29">2</a>] (See Appendix.)</p><p>The symbols of the Wyckoff position are quite similar to those in 3D
+space groups but the convention of the latter is slightly modified
+owing to several reasons. The number of equivalent positions is
+separated into two parts for the centered lattice, the number of
+centering translations and the number of equivalent positions in the
+asymmetric unit. They are separated by the center dot. In addition,
+the number of equivalent position is followed by the alphabetical
+character which begins with <span style="font-style:italic">a</span> in a class with the same number of
+equivalent positions. [The number of alphabets (26) is too small to
+distinguish Wyckoff positions in some 6D space groups if the
+convention of the 3D space groups in the International Table is
+employed.[<a href="#Hahn%282002%29">4</a>]] For example, in the 6D space group
+<span style="font-style:italic">Pm</span><span style="text-decoration:overline">3</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span>), not discussed here, there are 47
+Wyckoff positions.)</p>
+<!--TOC section id="sec4" Crystalline Approximants-->
+<h2 id="sec4" class="section">4&#X2003;Crystalline Approximants</h2><!--SEC END --><p>As the first application of the Wyckoff position, we consider the
+space group of the crystalline approximants of icosahedral
+quasicrystals, which are obtained from a six-dimensional (6D) model.
+As is well known, the period of the approximants are determined by the
+linear phason strain.[<a href="#Ishii%281989b%29">5</a>, <a href="#Jaric%281990%29">8</a>, <a href="#Yamamoto%281992b%29">13</a>]
+The space group of the approximants depends on the 3D hyperplane used.
+In order to obtain a given space group symmetry, the hyperplane
+passing through a point in 6D lattice with the point symmetry equal to
+or higher than the highest site symmetry in the space group has to be
+used. For example, cubic approximants with <span style="font-style:italic">Pm</span><span style="text-decoration:overline">3</span>,
+<span style="font-style:italic">Im</span><span style="text-decoration:overline">3</span> <span style="font-style:italic">Pa</span><span style="text-decoration:overline">3</span>, <span style="font-style:italic">Ia</span><span style="text-decoration:overline">3</span> are known. The
+highest site symmetry of the former two is <span style="font-style:italic">m</span><span style="text-decoration:overline">3</span> while that
+of the latter two is <span style="text-decoration:overline">3</span>. The Wyckoff positions of the
+space group <span style="font-style:italic">Pm</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>),
+which have a point group equal to or higher than these, are 1<span style="font-style:italic">a</span>,
+1<span style="font-style:italic">b</span>, 10<span style="font-style:italic">a</span> and 10<span style="font-style:italic">b</span>. (See Table4.) The 3D hyperplane passing through
+the former two leads to the cubic approximants with the space group
+<span style="font-style:italic">Pm</span><span style="text-decoration:overline">3</span> or <span style="font-style:italic">Im</span><span style="text-decoration:overline">3</span>, while those through the latter
+two gives <span style="font-style:italic">Pa</span><span style="text-decoration:overline">3</span> or <span style="font-style:italic">Ia</span><span style="text-decoration:overline">3</span> depending on the order
+of the approximant. When the order of the approximant <span style="font-style:italic">i</span> is defined
+by the Fibonacci number of the approximant <span style="font-style:italic">F</span><sub><span style="font-style:italic">i</span></sub>/<span style="font-style:italic">F</span><sub><span style="font-style:italic">i</span>+1</sub>, (<span style="font-style:italic">F</span><sub>0</sub>=1,
+<span style="font-style:italic">F</span><sub>1</sub>=1, <span style="font-style:italic">F</span><sub><span style="font-style:italic">i</span>+1</sub>=<span style="font-style:italic">F</span><sub><span style="font-style:italic">i</span>&#X2212;1</sub>+<span style="font-style:italic">F</span><sub><span style="font-style:italic">i</span></sub>) the approximant with <span style="font-style:italic">i</span>=0 mod 3 has
+the body centered lattice, while that with <span style="font-style:italic">i</span>=1,2 mod 3 has the
+primitive lattice. Thus <span style="font-style:italic">Im</span><span style="text-decoration:overline">3</span> and <span style="font-style:italic">Pa</span><span style="text-decoration:overline">3</span> are
+possible for the 1/1 and 1/2 approximants. A 3/2 approximant is
+recently found in i-Al-Pd-Cr-Fe system. This has <span style="font-style:italic">Pa</span><span style="text-decoration:overline">3</span>,
+consistent with the above results.[<a href="#Fujita%282013%29">3</a>].</p><blockquote class="table"><div class="center"><hr class="floatrule"></div>
+<div class="caption"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="vertical-align:top;text-align:left;" >Table 3:  The Wyckoff positions of the space group
+<span style="font-style:italic">Fm</span><sub><span style="font-style:italic">xy</span></sub><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>.
+The first column represents Wyckoff symbol (W.S.). The second and
+third columns denote the site symmetry and the representative
+coordinates, respectively. In the Wyckoff positions in the second
+setting in
+<span style="font-style:italic">Fm</span><sub><span style="font-style:italic">xy</span></sub><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>),
+&#X2212;&#X3C4;<sub>2</sub>/2 shown in Table 1 should be added to the coordinates.</td></tr>
+</table></div><div class="center"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:center;white-space:nowrap"  colspan=3><span style="font-style:italic">Fm</span><sub><span style="font-style:italic">xy</span></sub><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >W.S.</td><td style="text-align:center;white-space:nowrap" >site symmetry</td><td style="text-align:center;white-space:nowrap" >coordinates</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 2<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >235(235)</td><td style="text-align:center;white-space:nowrap" >(0,0,0,0,0,0)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 2<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >235(235)</td><td style="text-align:center;white-space:nowrap" >(1,1,0,0,0,1)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 12<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" ><span style="text-decoration:overline">5</span>(<span style="text-decoration:overline">5</span><sup>2</sup>)</td><td style="text-align:center;white-space:nowrap" >(5,1,1,1,1,5)/8</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 12<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" ><span style="text-decoration:overline">5</span>(<span style="text-decoration:overline">5</span><sup>2</sup>)</td><td style="text-align:center;white-space:nowrap" >(3,3,3,3,3,7)/8</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 20<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" ><span style="text-decoration:overline">3</span>(<span style="text-decoration:overline">3</span>)</td><td style="text-align:center;white-space:nowrap" >(7,3,1,3,1,7)/8</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 20<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" ><span style="text-decoration:overline">3</span>(<span style="text-decoration:overline">3</span>)</td><td style="text-align:center;white-space:nowrap" >(1,5,3,1,3,1)/8</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 30<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(1,1,0,1,1,2)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 30<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(1,1,0,0,0,2)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 24<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >5(5<sup>2</sup>)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 40<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >3(3)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 60<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(0,0,<span style="font-style:italic">x</span>,&#X2212;<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 60<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(1/4,1/4,<span style="font-style:italic">x</span>,&#X2212;<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 120<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >1(1)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">z</span>,<span style="font-style:italic">u</span>,<span style="font-style:italic">v</span>,<span style="font-style:italic">w</span>)</td></tr>
+</table></div><div class="center"><hr class="floatrule"></div></blockquote><blockquote class="table"><div class="center"><hr class="floatrule"></div>
+<div class="caption"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="vertical-align:top;text-align:left;" >Table 4:  The Wyckoff positions of the space group <span style="font-style:italic">Im</span><span style="text-decoration:overline">3</span>5(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>).</td></tr>
+</table></div><div class="center"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:center;white-space:nowrap"  colspan=3><span style="font-style:italic">Im</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" > W.S.</td><td style="text-align:center;white-space:nowrap" >site symmetry</td><td style="text-align:center;white-space:nowrap" >coordinates</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 1<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>)</td><td style="text-align:center;white-space:nowrap" >(0,0,0,0,0,0)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 6<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" ><span style="text-decoration:overline">5</span><span style="font-style:italic">m</span>(<span style="text-decoration:overline">5</span><sup>2</sup><span style="font-style:italic">m</span>)</td><td style="text-align:center;white-space:nowrap" >(1,0,0,0,0,0)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 6<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" ><span style="text-decoration:overline">5</span><span style="font-style:italic">m</span>(<span style="text-decoration:overline">5</span><sup>2</sup><span style="font-style:italic">m</span>)</td><td style="text-align:center;white-space:nowrap" >(1,1,1,1,1,1)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 6<span style="font-style:italic">c</span></td><td style="text-align:center;white-space:nowrap" ><span style="text-decoration:overline">5</span><span style="font-style:italic">m</span>(<span style="text-decoration:overline">5</span><sup>2</sup><span style="font-style:italic">m</span>)</td><td style="text-align:center;white-space:nowrap" >(3,1,1,1,1,1)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 10<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" ><span style="text-decoration:overline">3</span><span style="font-style:italic">m</span>(<span style="text-decoration:overline">3</span><span style="font-style:italic">m</span>)</td><td style="text-align:center;white-space:nowrap" >(1,1,1,0,0,0)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 10<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" ><span style="text-decoration:overline">3</span><span style="font-style:italic">m</span>(<span style="text-decoration:overline">3</span><span style="font-style:italic">m</span>)</td><td style="text-align:center;white-space:nowrap" >(1,1,1,3,1,3)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 10<span style="font-style:italic">c</span></td><td style="text-align:center;white-space:nowrap" ><span style="text-decoration:overline">3</span><span style="font-style:italic">m</span>(<span style="text-decoration:overline">3</span><span style="font-style:italic">m</span>)</td><td style="text-align:center;white-space:nowrap" >(1,1,1,1,3,1)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 12<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >5<span style="font-style:italic">m</span>(5<sup>2</sup><span style="font-style:italic">m</span>)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 15<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">mmm</span>(<span style="font-style:italic">mmm</span>)</td><td style="text-align:center;white-space:nowrap" >(1,1,0,0,0,0)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 20<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >3<span style="font-style:italic">m</span>(3<span style="font-style:italic">m</span>)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">x</span>,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,<span style="text-decoration:overline"><span style="font-style:italic">y</span></span>,<span style="font-style:italic">y</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 30<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(1,3,0,3,3,2)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 30<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(2,0,3,3,1,1)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 30<span style="font-style:italic">c</span></td><td style="text-align:center;white-space:nowrap" >2<span style="font-style:italic">mm</span>(2<span style="font-style:italic">mm</span>)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,0,0,<span style="font-style:italic">y</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 60<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">m</span>(<span style="font-style:italic">m</span>)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">x</span>,0,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,0)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 120<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >1(1)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">z</span>,<span style="font-style:italic">u</span>,<span style="font-style:italic">v</span>,<span style="font-style:italic">w</span>)</td></tr>
+</table></div><div class="center"><hr class="floatrule"></div></blockquote>
+<!--TOC section id="sec5" i-Cd-Yb Structure without Positional Disorder-->
+<h2 id="sec5" class="section">5&#X2003;i-Cd-Yb Structure without Positional Disorder</h2><!--SEC END --><p>The i-Cd-Yb is composed of the Tsai-type cluster, the innermost shell
+of which is a tetrahedron. The cluster center positions are generated
+by the central part of the occupation domain located at the origin in
+the space group
+<span style="font-style:italic">Pm</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>). The origin
+has the site symmetry of
+<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>) which is higher
+than the point symmetry of the tetrahedron, 23. As a result, when
+the orientation of the tetrahedron is the same everywhere, the
+symmetry of the QC becomes 23. In the structure refinement,
+therefore, the randomly orientated tetrahedra with the occupancy of
+1/10 are assumed.[<a href="#Takakura%282007a%29">12</a>]</p><blockquote class="table"><div class="center"><hr class="floatrule"></div>
+<div class="caption"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="vertical-align:top;text-align:left;" >Table 5:  The Wyckoff positions of the space group
+<span style="font-style:italic">Pm</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>). In
+the Wyckoff positions for the second setting in
+<span style="font-style:italic">Pm</span><sub><span style="font-style:italic">xy</span></sub><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>),
+&#X2212;&#X3C4;<sub>1</sub>/2 in Table 1 should be added to the coordinates.</td></tr>
+</table></div><div class="center"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:center;white-space:nowrap"  colspan=3><span style="font-style:italic">Pm</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" > W.S.</td><td style="text-align:center;white-space:nowrap" >site symmetry</td><td style="text-align:center;white-space:nowrap" >coordinates</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>)</td><td style="text-align:center;white-space:nowrap" >(0,0,0,0,0,0)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>)</td><td style="text-align:center;white-space:nowrap" >(1,1,1,1,1,1)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >6<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" ><span style="text-decoration:overline">5</span><span style="font-style:italic">m</span>(<span style="text-decoration:overline">5</span><sup>2</sup><span style="font-style:italic">m</span>)</td><td style="text-align:center;white-space:nowrap" >(0,1,1,1,1,1)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >6<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" ><span style="text-decoration:overline">5</span><span style="font-style:italic">m</span>(<span style="text-decoration:overline">5</span><sup>2</sup><span style="font-style:italic">m</span>)</td><td style="text-align:center;white-space:nowrap" >(1,0,0,0,0,0)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >10<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" ><span style="text-decoration:overline">3</span><span style="font-style:italic">m</span>(<span style="text-decoration:overline">3</span><span style="font-style:italic">m</span>)</td><td style="text-align:center;white-space:nowrap" >(1,1,0,0,0,1)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >10<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" ><span style="text-decoration:overline">3</span><span style="font-style:italic">m</span></td><td style="text-align:center;white-space:nowrap" >(0,0,1,1,1,0)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >12<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >5<span style="font-style:italic">m</span>(5<sup>2</sup><span style="font-style:italic">m</span>)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >15<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">mmm</span>(<span style="font-style:italic">mmm</span>)</td><td style="text-align:center;white-space:nowrap" >(0,0,1,0,0,1)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >15<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">mmm</span>(<span style="font-style:italic">mmm</span>)</td><td style="text-align:center;white-space:nowrap" >(0,0,1,1,1,1)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >20<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >3<span style="font-style:italic">m</span>(3<span style="font-style:italic">m</span>)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,<span style="text-decoration:overline"><span style="font-style:italic">y</span></span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >30<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >2<span style="font-style:italic">mm</span>(2<span style="font-style:italic">mm</span>)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,0,0,<span style="font-style:italic">y</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >30<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >2<span style="font-style:italic">mm</span>(2<span style="font-style:italic">mm</span>)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,1/2,1/2,<span style="font-style:italic">y</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >60<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(0,1/2,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >60<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">m</span>(<span style="font-style:italic">m</span>)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">z</span>,<span style="font-style:italic">u</span>,<span style="font-style:italic">u</span>,<span style="font-style:italic">z</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >120<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >1(1)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">z</span>,<span style="font-style:italic">u</span>,<span style="font-style:italic">v</span>,<span style="font-style:italic">w</span>)</td></tr>
+</table></div><div class="center"><hr class="floatrule"></div></blockquote><blockquote class="table"><div class="center"><hr class="floatrule"></div>
+<div class="caption"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="vertical-align:top;text-align:left;" >Table 6:  The Wyckoff positions of the space group
+<span style="font-style:italic">Pm</span><sub><span style="font-style:italic">xy</span></sub><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>). In
+the Wyckoff positions for the second setting in
+<span style="font-style:italic">Pm</span><sub><span style="font-style:italic">xy</span></sub><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>),
+&#X2212;&#X3C4;<sub>1</sub>/2 in Table 1 should be added to the coordinates.</td></tr>
+</table></div><div class="center"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:center;white-space:nowrap"  colspan=3><span style="font-style:italic">Pm</span><sub><span style="font-style:italic">xy</span></sub><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >WS</td><td style="text-align:center;white-space:nowrap" >site symmetry</td><td style="text-align:center;white-space:nowrap" >coordinates</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >235(235<sup>2</sup>)</td><td style="text-align:center;white-space:nowrap" >(0,0,0,0,0,0)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >12<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >52(5<sup>2</sup>2)</td><td style="text-align:center;white-space:nowrap" >(0,1,1,1,1,1)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >12<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" ><span style="text-decoration:overline">5</span>(<span style="text-decoration:overline">5</span><sup>2</sup>)</td><td style="text-align:center;white-space:nowrap" >(3,3,3,3,3,3)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >12<span style="font-style:italic">c</span></td><td style="text-align:center;white-space:nowrap" ><span style="text-decoration:overline">5</span>(<span style="text-decoration:overline">5</span><sup>2</sup>)</td><td style="text-align:center;white-space:nowrap" >(3,1,1,1,1,1)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >20<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >32(32)</td><td style="text-align:center;white-space:nowrap" >(1,1,0,0,0,1)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >20<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" ><span style="text-decoration:overline">3</span>(<span style="text-decoration:overline">3</span>)</td><td style="text-align:center;white-space:nowrap" >(3,3,3,1,3,3)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >20<span style="font-style:italic">c</span></td><td style="text-align:center;white-space:nowrap" ><span style="text-decoration:overline">3</span>(<span style="text-decoration:overline">3</span>)</td><td style="text-align:center;white-space:nowrap" >(1,1,3,1,3,1)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >30<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(0,0,1,0,0,1)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >24<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >5(5<sup>2</sup>)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >40<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >3(3)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >60<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(0,0,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >60<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(0,1/2,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >120<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >1(1)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">z</span>,<span style="font-style:italic">u</span>,<span style="font-style:italic">v</span>,<span style="font-style:italic">w</span>)</td></tr>
+</table></div><div class="center"><hr class="floatrule"></div></blockquote><p>The ODs for the atom positions of the first shell are located at the
+Wyckoff position 20<span style="font-style:italic">a</span> in
+<span style="font-style:italic">Pm</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span>(<span style="font-style:italic">m</span><span style="text-decoration:overline">3</span><span style="text-decoration:overline">5</span><sup>2</sup>) and
+<span style="font-style:italic">P</span>235(235<sup>2</sup>). (See Tables 4 and 7.) Their site symmetry is 3<span style="font-style:italic">m</span>(3<span style="font-style:italic">m</span>)
+and 3(3). In order to obtain a completely ordered i-Cd-Yb
+structure, the site symmetry of the cluster center has to be
+23(23). In the non-centrosymmetric icosahedral group <span style="font-style:italic">P</span>235(235<sup>2</sup>),
+the site symmetry of the origin is 235(235<sup>2</sup>). The OD of the cluster
+center can be subdivided into 5 disconnected domains with the symmetry
+23(23). The ODs of the constituent atoms of the first shell is
+obtained from these disconnected ODs by shifting them in parallel to
+the external space.[<a href="#Yamamoto%281988b%29">16</a>, <a href="#Yamamoto%282006b%29">15</a>] The shifted
+positions belong to the Wyckoff position 20<span style="font-style:italic">a</span>. In the latter, the
+site symmetry of the OD is higher than that of the Wyckoff
+position. Therefore, this model gives the icosahedral space group
+<span style="font-style:italic">P</span>235(235<sup>2</sup>). On the other hand, the symmetry of the disconnected OD
+breaks the total symmetry in the former. Thus we can simply conclude
+that the total symmetry of the completely ordered model is
+<span style="font-style:italic">P</span>235(235<sup>2</sup>) from the site symmetry of the Wyckoff position.
+The full detail of this model will be shown in a sepalate paper.</p><blockquote class="table"><div class="center"><hr class="floatrule"></div>
+<div class="caption"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="vertical-align:top;text-align:left;" >Table 7:  The Wyckoff positions of the space group <span style="font-style:italic">F</span>235(235<sup>2</sup>).</td></tr>
+</table></div><div class="center"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:center;white-space:nowrap"  colspan=3><span style="font-style:italic">F</span>235</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >W.S.</td><td style="text-align:center;white-space:nowrap" >site symmetry</td><td style="text-align:center;white-space:nowrap" >coordinates</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 1<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >235(235<sup>2</sup>)</td><td style="text-align:center;white-space:nowrap" >(0,0,0,0,0,0)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 1<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >235(235<sup>2</sup>)</td><td style="text-align:center;white-space:nowrap" >(1,1,1,1,1,1)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 1<span style="font-style:italic">c</span></td><td style="text-align:center;white-space:nowrap" >235(235<sup>2</sup>)</td><td style="text-align:center;white-space:nowrap" >(3,1,1,1,1,1)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 6<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >52(5<sup>2</sup>2)</td><td style="text-align:center;white-space:nowrap" >(1,0,0,0,0,0)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 12<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >5(5<sup>2</sup>)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 15<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(0,0,0,1,1,2)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 15<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(1,1,0,1,1,0)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 15<span style="font-style:italic">c</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(1,1,0,0,0,0)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 15<span style="font-style:italic">d</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(1,1,0,1,1,2)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 20<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >3(3)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 30<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(0,0,<span style="font-style:italic">x</span>,&#X2212;<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 30<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(1/4,1/4,<span style="font-style:italic">x</span>,&#X2212;<span style="font-style:italic">y</span>,+<span style="font-style:italic">y</span>,1/2&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 30<span style="font-style:italic">c</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(1/4,1/4,<span style="font-style:italic">x</span>,1/4&#X2212;<span style="font-style:italic">y</span>,1/4+<span style="font-style:italic">y</span>,1/2&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 30<span style="font-style:italic">d</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(1/2,0,<span style="font-style:italic">x</span>,1/4&#X2212;<span style="font-style:italic">y</span>,1/4+<span style="font-style:italic">y</span>,1/2&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 60<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >1(1)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">z</span>,<span style="font-style:italic">u</span>,<span style="font-style:italic">v</span>,<span style="font-style:italic">w</span>)</td></tr>
+</table></div><div class="center"><hr class="floatrule"></div></blockquote><blockquote class="table"><div class="center"><hr class="floatrule"></div>
+<div class="caption"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="vertical-align:top;text-align:left;" >Table 8:  The Wyckoff positions of the space group <span style="font-style:italic">F</span>235<sub>1</sub>(235<sup>2</sup>).</td></tr>
+</table></div><div class="center"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:center;white-space:nowrap"  colspan=3><span style="font-style:italic">F</span>235<sub>1</sub>(235<sup>2</sup>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >W.S.</td><td style="text-align:center;white-space:nowrap" >site symmetry</td><td style="text-align:center;white-space:nowrap" >coordinates</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 5<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >23(23)</td><td style="text-align:center;white-space:nowrap" >(15,5,5,3,7,15)/20</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 5<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >23(23)</td><td style="text-align:center;white-space:nowrap" >(5,5,0,4,1,5)/10</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 5<span style="font-style:italic">c</span></td><td style="text-align:center;white-space:nowrap" >23(23)</td><td style="text-align:center;white-space:nowrap" >(0,5,0,4,1,5)/10</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 5<span style="font-style:italic">d</span></td><td style="text-align:center;white-space:nowrap" >23(23)</td><td style="text-align:center;white-space:nowrap" >(15,5,5,3,7,15)/20</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 10<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >32(32)</td><td style="text-align:center;white-space:nowrap" >(8,2,0,3,0,5)/10</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 10<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >32(32)</td><td style="text-align:center;white-space:nowrap" >(11,9,5,1,5,15)/20</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 10<span style="font-style:italic">c</span></td><td style="text-align:center;white-space:nowrap" >32(32)</td><td style="text-align:center;white-space:nowrap" >(1,9,5,1,5,15)/20</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 10<span style="font-style:italic">d</span></td><td style="text-align:center;white-space:nowrap" >32(32)</td><td style="text-align:center;white-space:nowrap" >(8,2,0,3,0,5)/10</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 15<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(11,9,5,1,5,15)/20</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 15<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(1,9,5,1,5,15)/20</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 15<span style="font-style:italic">c</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(5,15,5,8,2,15)/20</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 15<span style="font-style:italic">d</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(0,10,5,8,2,15)/20</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 20<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >3(3)</td><td style="text-align:center;white-space:nowrap" >(3/5+<span style="font-style:italic">x</span>,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,3/10&#X2212;<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,3/10+<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 30<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(0,0,<span style="font-style:italic">x</span>,&#X2212;<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 30<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(1/4,1/4,<span style="font-style:italic">x</span>,1/4&#X2212;<span style="font-style:italic">y</span>,1/4+<span style="font-style:italic">y</span>,1/2&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 30<span style="font-style:italic">c</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(1/4,1/4,<span style="font-style:italic">x</span>,&#X2212;<span style="font-style:italic">y</span>,+<span style="font-style:italic">y</span>,1/2&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >32&#XB7; 60<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >1(1)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">z</span>,<span style="font-style:italic">u</span>,<span style="font-style:italic">v</span>,<span style="font-style:italic">w</span>)</td></tr>
+</table></div><div class="center"><hr class="floatrule"></div></blockquote>
+<!--TOC section id="sec6" Discussion-->
+<h2 id="sec6" class="section">6&#X2003;Discussion</h2><!--SEC END --><p>In the structure refinement program of quasicrystals, <span style="font-style:italic">qcdiff</span>, the OD
+positions are specified by two 6D vectors, the center of large OD
+<span style="font-weight:bold"><span style="font-style:italic">x</span></span><sub>0</sub> and an internal space component of a vector from it, <span style="font-weight:bold"><span style="font-style:italic">x</span></span><sub>1</sub><sup><span style="font-style:italic">i</span></sup>. The site symmetry of <span style="font-weight:bold"><span style="font-style:italic">x</span></span><sub>0</sub>+<span style="font-weight:bold"><span style="font-style:italic">x</span></span><sub>1</sub><sup><span style="font-style:italic">i</span></sup> is determined
+by <span style="font-style:italic">x</span><sub>0<span style="font-style:italic">i</span></sub>+<span style="font-style:italic">y</span><sub>1<span style="font-style:italic">i</span></sub> (1&#X2264; <span style="font-style:italic">i</span>&#X2264; 6) or the intersection of the site
+symmetries of <span style="font-weight:bold"><span style="font-style:italic">x</span></span><sub>0</sub> and <span style="font-weight:bold"><span style="font-style:italic">x</span></span><sub>1</sub><sup><span style="font-style:italic">i</span></sup>.</p><p>The 6D coordinates of <span style="font-weight:bold"><span style="font-style:italic">x</span></span><sub><span style="font-style:italic">i</span></sub> (<span style="font-style:italic">i</span>=1,2) and <span style="font-weight:bold"><span style="font-style:italic">x</span></span><sub>1</sub><sup><span style="font-style:italic">i</span></sup> are
+denoted as (<span style="font-style:italic">x</span><sub><span style="font-style:italic">i</span>1</sub>,<span style="font-style:italic">x</span><sub><span style="font-style:italic">i</span>2</sub>,<span style="font-style:italic">x</span><sub><span style="font-style:italic">i</span>3</sub>,<span style="font-style:italic">x</span><sub><span style="font-style:italic">i</span>4</sub>,<span style="font-style:italic">x</span><sub><span style="font-style:italic">i</span>5</sub>,<span style="font-style:italic">x</span><sub><span style="font-style:italic">i</span>6</sub>) and
+(<span style="font-style:italic">y</span><sub>11</sub>,<span style="font-style:italic">y</span><sub>12</sub>,<span style="font-style:italic">y</span><sub>13</sub>,<span style="font-style:italic">y</span><sub>14</sub>,<span style="font-style:italic">y</span><sub>15</sub>,<span style="font-style:italic">y</span><sub>16</sub>). Then
+(<span style="font-style:italic">y</span><sub>11</sub>,<span style="font-style:italic">y</span><sub>12</sub>,<span style="font-style:italic">y</span><sub>13</sub>,<span style="font-style:italic">y</span><sub>14</sub>,<span style="font-style:italic">y</span><sub>15</sub>,<span style="font-style:italic">y</span><sub>16</sub>), are given by
+<span style="font-style:italic">y</span><sub><span style="font-style:italic">i</span></sub>=&#X2211;<sub><span style="font-style:italic">j</span>=1</sub><sup>6</sup> <span style="font-style:italic">P</span><sub><span style="font-style:italic">ik</span></sub><sup><span style="font-style:italic">i</span></sup><span style="font-style:italic">x</span><sub><span style="font-style:italic">k</span></sub>, where <span style="font-style:italic">P</span><sup><span style="font-style:italic">i</span></sup> is a matrix composed of
+irrational elements shown in Appendix. As a result, the internal space
+component of a non-zero lattice vector includes irrational
+elements. Such vectors therefore belong to a low symmetric Wyckoff
+position. Therefore, the symmetry of the OD center <span style="font-weight:bold"><span style="font-style:italic">x</span></span><sub>0</sub> is
+higher than that of <span style="font-weight:bold"><span style="font-style:italic">x</span></span><sup><span style="font-style:italic">i</span></sup> in most cases, so that the site
+symmetry of the OD is given by that of <span style="font-weight:bold"><span style="font-style:italic">x</span></span><sub>1</sub><sup><span style="font-style:italic">i</span></sup>=(<span style="font-style:italic">y</span><sub>11</sub>,<span style="font-style:italic">y</span><sub>12</sub>,<span style="font-style:italic">y</span><sub>13</sub>,<span style="font-style:italic">y</span><sub>14</sub>,<span style="font-style:italic">y</span><sub>15</sub>,<span style="font-style:italic">y</span><sub>16</sub>). If <span style="font-weight:bold"><span style="font-style:italic">x</span></span><sub>0</sub>
+and <span style="font-weight:bold"><span style="font-style:italic">x</span></span><sub>1</sub> is known, the site symmetry of the OD is easily
+obtained from the table.</p><blockquote class="table"><div class="center"><hr class="floatrule"></div>
+<div class="caption"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="vertical-align:top;text-align:left;" >Table 9:  The Wyckoff positions of the space group <span style="font-style:italic">I</span>235(235<sup>2</sup>).
+(In the table the symbols <span style="font-style:italic">r</span><sub><span style="font-style:italic">i</span></sub>=<span style="font-style:italic">i</span>/20, (<span style="font-style:italic">i</span>=1,5,18,19) are used.)</td></tr>
+</table></div><div class="center"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:center;white-space:nowrap"  colspan=3><span style="font-style:italic">I</span>235(235<sup>2</sup>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" > W.S.</td><td style="text-align:center;white-space:nowrap" >site symmetry</td><td style="text-align:center;white-space:nowrap" >coordinates</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 1<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >235(235<sup>2</sup>)</td><td style="text-align:center;white-space:nowrap" >(0,0,0,0,0,0)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 6<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >52(5<sup>2</sup>2)</td><td style="text-align:center;white-space:nowrap" >(3,1,1,1,1,1)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 6<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >52(5<sup>2</sup>2)</td><td style="text-align:center;white-space:nowrap" >(1,0,0,0,0,0)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 6<span style="font-style:italic">c</span></td><td style="text-align:center;white-space:nowrap" >52(5<sup>2</sup>2)</td><td style="text-align:center;white-space:nowrap" >(1,1,1,1,1,1)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 10<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >32(32)</td><td style="text-align:center;white-space:nowrap" >(1,1,3,1,3,1)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 10<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >32(32)</td><td style="text-align:center;white-space:nowrap" >(0,0,1,1,1,0)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 10<span style="font-style:italic">c</span></td><td style="text-align:center;white-space:nowrap" >32(32)</td><td style="text-align:center;white-space:nowrap" >(1,1,1,3,1,1)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 12<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >5(5<sup>2</sup>)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 15<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(1,3,0,3,3,2)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 15<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(0,0,1,0,0,1)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 15<span style="font-style:italic">c</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(3,1,0,1,1,2)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 15<span style="font-style:italic">d</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(2,0,3,3,1,1)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 15<span style="font-style:italic">e</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(3,1,0,3,3,2)/4</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 20<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >3(3)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">x</span>,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,<span style="text-decoration:overline"><span style="font-style:italic">y</span></span>,<span style="font-style:italic">y</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 30<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(0,0,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 30<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(0,1/2,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 30<span style="font-style:italic">c</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(3/4,1/4,1/4+<span style="font-style:italic">x</span>,1/4+<span style="font-style:italic">y</span>,1/4&#X2212;<span style="font-style:italic">y</span>,1/4&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 30<span style="font-style:italic">d</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(1/4,1/4,3/4+<span style="font-style:italic">x</span>,3/4+<span style="font-style:italic">y</span>,3/4&#X2212;<span style="font-style:italic">y</span>,3/4&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 60<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >1(1)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">z</span>,<span style="font-style:italic">u</span>,<span style="font-style:italic">v</span>,<span style="font-style:italic">w</span>)</td></tr>
+</table></div><div class="center"><hr class="floatrule"></div></blockquote><blockquote class="table"><div class="center"><hr class="floatrule"></div>
+<div class="caption"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="vertical-align:top;text-align:left;" >Table 10:  The Wyckoff positions of the space group <span style="font-style:italic">I</span>235<sub>1</sub>(235<sup>2</sup>).
+(In the table the symbols <span style="font-style:italic">r</span><sub><span style="font-style:italic">i</span></sub>=<span style="font-style:italic">i</span>/20, (<span style="font-style:italic">i</span>=1,5,18,19) are used.)</td></tr>
+</table></div><div class="center"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:center;white-space:nowrap"  colspan=3><span style="font-style:italic">I</span>235<sub>1</sub>(235<sup>2</sup>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" > W.S.</td><td style="text-align:center;white-space:nowrap" >site symmetry</td><td style="text-align:center;white-space:nowrap" >coordinates</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 5<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >23(23)</td><td style="text-align:center;white-space:nowrap" >(5,5,19,19,11,11)/20</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 10<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >32(32)</td><td style="text-align:center;white-space:nowrap" >(19,1,19,11,3,1)/20</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 10<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >32(32)</td><td style="text-align:center;white-space:nowrap" >(2,3,7,8,9,3)/10</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 10<span style="font-style:italic">c</span></td><td style="text-align:center;white-space:nowrap" >32(32)</td><td style="text-align:center;white-space:nowrap" >(19,1,9,1,13,1)/20</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 10<span style="font-style:italic">d</span></td><td style="text-align:center;white-space:nowrap" >32(32)</td><td style="text-align:center;white-space:nowrap" >(2,3,2,3,4,3)/10</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 15<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(0,0,19,4,16,1)/20</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 15<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(0,0,9,4,16,11)/20</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 15<span style="font-style:italic">c</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(15,5,19,9,1,11)/20</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 15<span style="font-style:italic">d</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(5,5,4,4,6,6)/20</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 15<span style="font-style:italic">e</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(0,0,19,14,6,1)/20</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 20<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >3(3)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">r</span><sub>19</sub>+<span style="font-style:italic">x</span>,<span style="font-style:italic">r</span><sub>1</sub>+<span style="font-style:italic">x</span>,<span style="font-style:italic">r</span><sub>1</sub>+<span style="font-style:italic">y</span>,<span style="font-style:italic">r</span><sub>9</sub>&#X2212;<span style="font-style:italic">y</span>,<span style="font-style:italic">r</span><sub>5</sub>+<span style="font-style:italic">y</span>,<span style="font-style:italic">r</span><sub>1</sub>+<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 30<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(0,0,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 30<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(0,1/2,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 30<span style="font-style:italic">c</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(3/4,1/4,1/4+<span style="font-style:italic">x</span>,1/4+<span style="font-style:italic">y</span>,1/4&#X2212;<span style="font-style:italic">y</span>,1/4&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 30<span style="font-style:italic">d</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(1/4,1/4,3/4+<span style="font-style:italic">x</span>,3/4+<span style="font-style:italic">y</span>,3/4&#X2212;<span style="font-style:italic">y</span>,3/4&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2&#XB7; 60<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >1(1)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">z</span>,<span style="font-style:italic">u</span>,<span style="font-style:italic">v</span>,<span style="font-style:italic">w</span>)</td></tr>
+</table></div><div class="center"><hr class="floatrule"></div></blockquote><blockquote class="table"><div class="center"><hr class="floatrule"></div>
+<div class="caption"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="vertical-align:top;text-align:left;" >Table 11:  The Wyckoff positions of the space group <span style="font-style:italic">P</span>235(235<sup>2</sup>).</td></tr>
+</table></div><div class="center"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:center;white-space:nowrap"  colspan=3><span style="font-style:italic">P</span>235(235<sup>2</sup>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" > W.S.</td><td style="text-align:center;white-space:nowrap" >site symmetry</td><td style="text-align:center;white-space:nowrap" >coordinates</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >235(235<sup>2</sup>)</td><td style="text-align:center;white-space:nowrap" >(0,0,0,0,0,0)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >235(235<sup>2</sup>)</td><td style="text-align:center;white-space:nowrap" >(1,1,1,1,1,1)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >6<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >52(5<sup>2</sup>2)</td><td style="text-align:center;white-space:nowrap" >(0,1,1,1,1,1)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >6<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >52(5<sup>2</sup>2)</td><td style="text-align:center;white-space:nowrap" >(1,0,0,0,0,0)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >10<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >32(32)</td><td style="text-align:center;white-space:nowrap" >(1,1,0,0,0,1)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >10<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >32(32)</td><td style="text-align:center;white-space:nowrap" >(0,0,1,1,1,0)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >12<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >5(5<sup>2</sup>)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >15<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(0,0,1,0,0,1)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >15<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(0,0,1,1,1,1)/2</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >20<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >3(3)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">y</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >30<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(0,0,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >30<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(0,1/2,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >30<span style="font-style:italic">c</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(1/2,1/2,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >60<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >1(1)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">z</span>,<span style="font-style:italic">u</span>,<span style="font-style:italic">v</span>,<span style="font-style:italic">w</span>)</td></tr>
+</table></div><div class="center"><hr class="floatrule"></div></blockquote><blockquote class="table"><div class="center"><hr class="floatrule"></div>
+<div class="caption"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="vertical-align:top;text-align:left;" >Table 12:  The Wyckoff positions of the space group <span style="font-style:italic">P</span>235<sub>1</sub>(235<sup>2</sup>).</td></tr>
+</table></div><div class="center"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:center;white-space:nowrap"  colspan=3><span style="font-style:italic">P</span>235<sub>1</sub>(235<sup>2</sup>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >WS</td><td style="text-align:center;white-space:nowrap" >site symmetry</td><td style="text-align:center;white-space:nowrap" >coordinates</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >5<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >23(23)</td><td style="text-align:center;white-space:nowrap" >(5,5,9,7,3,1)/10</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >5<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >23(23)</td><td style="text-align:center;white-space:nowrap" >(0,0,2,1,4,3)/5</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >10<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >32(32)</td><td style="text-align:center;white-space:nowrap" >(6,4,9,5,1,6)/10</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >10<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >32(32)</td><td style="text-align:center;white-space:nowrap" >(1,9,9,5,1,1)/10</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >10<span style="font-style:italic">c</span></td><td style="text-align:center;white-space:nowrap" >32(32)</td><td style="text-align:center;white-space:nowrap" >(3,2,2,0,3,3)/5</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >10<span style="font-style:italic">d</span></td><td style="text-align:center;white-space:nowrap" >32(32)</td><td style="text-align:center;white-space:nowrap" >(1,9,4,0,6,1)/10</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >15<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(0,0,9,2,8,1)/10</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >15<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >222(222)</td><td style="text-align:center;white-space:nowrap" >(0,0,9,7,3,1)/10</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >20<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >3(3)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,4/5+<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,2/5&#X2212;<span style="font-style:italic">y</span>,1/5+<span style="font-style:italic">y</span>,<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >30<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(0,0,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >30<span style="font-style:italic">b</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(0,1/2,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >30<span style="font-style:italic">c</span></td><td style="text-align:center;white-space:nowrap" >2(2)</td><td style="text-align:center;white-space:nowrap" >(1/2,1/2,<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">y</span>,&#X2212;<span style="font-style:italic">x</span>)</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >60<span style="font-style:italic">a</span></td><td style="text-align:center;white-space:nowrap" >1(1)</td><td style="text-align:center;white-space:nowrap" >(<span style="font-style:italic">x</span>,<span style="font-style:italic">y</span>,<span style="font-style:italic">z</span>,<span style="font-style:italic">u</span>,<span style="font-style:italic">v</span>,<span style="font-style:italic">w</span>)</td></tr>
+</table></div><div class="center"><hr class="floatrule"></div></blockquote>
+<!--TOC section id="sec7" Appendix-->
+<h2 id="sec7" class="section">7&#X2003;Appendix</h2><!--SEC END --><p>The unit vectors <span style="font-weight:bold"><span style="font-style:italic">d</span></span><sub><span style="font-style:italic">i</span></sub>, (<span style="font-style:italic">i</span>=1,2,..,6) of the primitive
+icosahedral lattice are taken along the 5-fold axes. Their external
+and internal space components are given by <span style="font-weight:bold"><span style="font-style:italic">d</span></span><sub><span style="font-style:italic">i</span></sub>=&#X2211;<span style="font-style:italic">Q</span><sub><span style="font-style:italic">ij</span></sub> <span style="font-weight:bold"><span style="font-style:italic">a</span></span><sub><span style="font-style:italic">j</span></sub>, where <span style="font-weight:bold"><span style="font-style:italic">a</span></span><sub><span style="font-style:italic">i</span></sub> i=1,2,3 and i=4,5,6 are the unit vectors of
+the external and internal spaces. The projection operators which
+project a 6D vector into its external and internal space components
+are given by 6&#XD7; 6 matrices <span style="font-style:italic">P</span><sup><span style="font-style:italic">e</span></sup> and <span style="font-style:italic">P</span><sup><span style="font-style:italic">i</span></sup>, which are defined
+by <span style="font-style:italic">P</span><sub><span style="font-style:italic">ij</span></sub><sup><span style="font-style:italic">e</span></sup>=&#X2211;<sub><span style="font-style:italic">k</span>=1</sub><sup>3</sup>Q<sub><span style="font-style:italic">ik</span></sub><sup>&#X2212;1</sup>Q<sub><span style="font-style:italic">kj</span></sub> and
+<span style="font-style:italic">P</span><sub><span style="font-style:italic">ij</span></sub><sup><span style="font-style:italic">i</span></sup>=&#X2211;<sub><span style="font-style:italic">k</span>=4</sub><sup>6</sup>Q<sub><span style="font-style:italic">ik</span></sub><sup>&#X2212;1</sup>Q<sub><span style="font-style:italic">kj</span></sub>. (The tilde
+means the transposition.) When <span style="font-weight:bold"><span style="font-style:italic">a</span></span><sub><span style="font-style:italic">i</span></sub> are taken in parallel to 2-fold axes, <span style="font-style:italic">Q</span> is given
+by[<a href="#Yamamoto%281996b%29">14</a>]</p><div class="equationcontainer"><table class="display dcenter"><tr style="vertical-align:middle"><td class="dcell">
+
+
+&#X2004;&#X2004;&#X2004;&#X2004;&#X2004;
+
+</td><td class="dcell"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:right;white-space:nowrap" ><table class="display"><tr style="vertical-align:middle"><td class="dcell"><span style="font-style:italic">Q</span>=</td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:center"><span style="font-style:italic">a</span></td></tr>
+<tr><td class="hrule"></td></tr>
+<tr><td class="dcell" style="text-align:center"><table class="display"><tr style="vertical-align:middle"><td class="dcell"><span style="font-size:x-large">&#X221A;</span></td><td class="dcell"><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >2+&#X3C4;</td></tr>
+</table></td></tr>
+</table></td></tr>
+</table></td><td class="dcell">&#X239B;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239D;</td><td class="dcell"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:center;white-space:nowrap" >1</td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" >0</td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" >0</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" >0</td><td style="text-align:center;white-space:nowrap" >1</td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" >0</td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" >0</td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" >0</td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >0</td><td style="text-align:center;white-space:nowrap" >1</td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" >0</td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" >1</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" >0</td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" >0</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >0</td><td style="text-align:center;white-space:nowrap" >1</td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" >0</td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >1</td></tr>
+</table></td></tr>
+</table></td><td class="dcell">&#X239E;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X23A0;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" ><span class="equationnumber-valign">(5)</span></td></tr>
+</table></td></tr>
+</table></div><div class="equationcontainer"><table class="display dcenter"><tr style="vertical-align:middle"><td class="dcell">
+
+
+&#X2004;&#X2004;&#X2004;&#X2004;&#X2004;
+
+</td><td class="dcell"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:right;white-space:nowrap" ><table class="display"><tr style="vertical-align:middle"><td class="dcell"><span style="font-style:italic">Q</span><sup>&#X2212;1</sup>=</td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:center"><span style="font-style:italic">a</span><sup>*</sup></td></tr>
+<tr><td class="hrule"></td></tr>
+<tr><td class="dcell" style="text-align:center">2<span style="font-style:italic">a</span></td></tr>
+</table></td><td class="dcell">Q</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" ><span class="equationnumber-valign">(6)</span></td></tr>
+</table></td></tr>
+</table></div><p>where &#X3C4;=(1+&#X221A;<span style="text-decoration:overline">5</span>)/2 and <span style="font-style:italic">a</span>=1/<span style="font-style:italic">a</span><sup>*</sup> is the lattice
+constant of the icosahedral lattice. The coordinates of the external
+and internal component of (<span style="font-style:italic">x</span><sub>1</sub>,<span style="font-style:italic">x</span><sub>2</sub>,<span style="font-style:italic">x</span><sub>3</sub>,<span style="font-style:italic">x</span><sub>4</sub>,<span style="font-style:italic">x</span><sub>5</sub>,<span style="font-style:italic">x</span><sub>6</sub>) are given by
+<span style="font-style:italic">y</span><sub><span style="font-style:italic">i</span></sub>=&#X2211;<sub><span style="font-style:italic">j</span></sub> <span style="font-style:italic">P</span><sub><span style="font-style:italic">ij</span></sub><sup><span style="font-style:italic">e</span>/<span style="font-style:italic">i</span></sup><span style="font-style:italic">x</span><sub><span style="font-style:italic">j</span></sub>.</p><p>The explicit forms of <span style="font-style:italic">P</span><sup><span style="font-style:italic">e</span></sup> amd <span style="font-style:italic">P</span><sup><span style="font-style:italic">i</span></sup> are</p><div class="equationcontainer"><table class="display dcenter"><tr style="vertical-align:middle"><td class="dcell">
+
+
+&#X2004;&#X2004;&#X2004;&#X2004;&#X2004;
+
+</td><td class="dcell"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:right;white-space:nowrap" ><table class="display"><tr style="vertical-align:middle"><td class="dcell"><span style="font-style:italic">P</span><sup><span style="font-style:italic">e</span></sup>=</td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:center">1</td></tr>
+<tr><td class="hrule"></td></tr>
+<tr><td class="dcell" style="text-align:center">2<span style="font-style:italic">A</span></td></tr>
+</table></td><td class="dcell">&#X239B;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239D;</td><td class="dcell"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">A</span></td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">A</span></td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">A</span></td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">A</span></td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">A</span></td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">A</span></td></tr>
+</table></td><td class="dcell">&#X239E;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X23A0;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" ><span class="equationnumber-valign">(7)</span></td></tr>
+</table></td></tr>
+</table></div><p>and</p><div class="equationcontainer"><table class="display dcenter"><tr style="vertical-align:middle"><td class="dcell">
+
+
+&#X2004;&#X2004;&#X2004;&#X2004;&#X2004;
+
+</td><td class="dcell"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:right;white-space:nowrap" ><table class="display"><tr style="vertical-align:middle"><td class="dcell"><span style="font-style:italic">P</span><sup><span style="font-style:italic">i</span></sup>=</td><td class="dcell"><table class="display"><tr><td class="dcell" style="text-align:center">1</td></tr>
+<tr><td class="hrule"></td></tr>
+<tr><td class="dcell" style="text-align:center">2<span style="font-style:italic">A</span></td></tr>
+</table></td><td class="dcell">&#X239B;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239C;<br>
+&#X239D;</td><td class="dcell"><table style="border-spacing:6px;border-collapse:separate;" class="cellpading0"><tr><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">A</span></td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">A</span></td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">A</span></td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">A</span></td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+<tr><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">A</span></td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" >&#X3C4;</td><td style="text-align:center;white-space:nowrap" ><table style="border:0;border-spacing:1;border-collapse:separate;" class="cellpadding0"><tr><td class="hrule"></td></tr>
+<tr><td style="text-align:center;white-space:nowrap" >&#X3C4;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" ><span style="font-style:italic">A</span></td></tr>
+</table></td><td class="dcell">&#X239E;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X239F;<br>
+&#X23A0;</td></tr>
+</table></td><td style="text-align:center;white-space:nowrap" >&nbsp;</td><td style="text-align:left;white-space:nowrap" >&nbsp;</td><td style="text-align:right;white-space:nowrap" ><span class="equationnumber-valign">(8)</span></td></tr>
+</table></td></tr>
+</table></div><p>where <span style="font-style:italic">A</span>=2+&#X3C4;. (Note that <span style="font-style:italic">P</span><sup><span style="font-style:italic">e</span></sup>+<span style="font-style:italic">P</span><sup><span style="font-style:italic">i</span></sup>=<span style="font-style:italic">I</span>.) This indicates
+that the external and internal space componens of a lattice vector or
+a vector with rational coordinates have always irrational compoments
+except for the zero vector. Therefore they belong to low symmetric
+Wyckoff position, which includes arbitrary parameter denoted as <span style="font-style:italic">x</span>,
+<span style="font-style:italic">y</span> <span style="font-style:italic">etc</span> in the tables.</p><!--TOC section id="sec8" References-->
+<h2 id="sec8" class="section">References</h2><!--SEC END --><dl class="thebibliography"><dt class="dt-thebibliography">
+<a id="Eick(1997)">[1]</a></dt><dd class="dd-thebibliography">
+B.&#X2004;&#X200D;Eick, F.&#X2004;&#X200D;G&#XE4;hler, and W.&#X2004;&#X200D;Nickel.
+Computing Maximal Subrgoups and Wyckoff Positions of Space Groups.
+<em>Acta Crystallogr.</em>, A53:467, 1997.</dd><dt class="dt-thebibliography"><a id="Elser(1985a)">[2]</a></dt><dd class="dd-thebibliography">
+V.&#X2004;&#X200D;Elser.
+Indexing problems in quasicrystal diffraction.
+<em>Phys. Rev.</em>, B32:4892&#X2013;4898, 1985.</dd><dt class="dt-thebibliography"><a id="Fujita(2013)">[3]</a></dt><dd class="dd-thebibliography">
+N.&#X2004;&#X200D;Fujita, H.&#X2004;&#X200D;Takano, A.&#X2004;&#X200D;Yamamoto, and A.-P. Tsai.
+Cluster-packing geometry for Al-based F-type icosahedral alloys.
+<em>Acta Crystallogr.</em>, A:322&#X2013;340, 2013.</dd><dt class="dt-thebibliography"><a id="Hahn(2002)">[4]</a></dt><dd class="dd-thebibliography">
+T.&#X2004;&#X200D;Hahn.
+In T.&#X2004;&#X200D;Hahn, editor, <em>International Tables for Crystallography</em>,
+volume&#X2004;&#X200D;A. Kluwer Acadimic Publishers, 2002.</dd><dt class="dt-thebibliography"><a id="Ishii(1989b)">[5]</a></dt><dd class="dd-thebibliography">
+Y.&#X2004;&#X200D;Ishii.
+Mode locking in quasicrystals.
+<em>Phys. Rev.</em>, B39:,11862&#X2013;11871, 1989.</dd><dt class="dt-thebibliography"><a id="Janssen(1986)">[6]</a></dt><dd class="dd-thebibliography">
+T.&#X2004;&#X200D;Janssen.
+Crystallograhy of Quasi-Crystals.
+<em>Acta Crystallogr.</em>, A42:261&#X2013;271, 1986.</dd><dt class="dt-thebibliography"><a id="Janssen(2002a)">[7]</a></dt><dd class="dd-thebibliography">
+T.&#X2004;&#X200D;Janssen, J.&#X2004;&#X200D;L. Birman, F.&#X2004;&#X200D;Denoyer, V.&#X2004;&#X200D;A. Koptsik, J.&#X2004;&#X200D;L. Verger-Gaugry,
+D.&#X2004;&#X200D;Weigel, A.&#X2004;&#X200D;Yamamoto, and S.&#X2004;&#X200D;C. Abrahams.
+Report of a Subcommittee on the Nomenclature of n-Dimensional
+Crystallography. II. Symbols for arithmetic crystal classes, Bravais classes
+and space groups.
+<em>Acta Crystallogr.</em>, A58:605&#X2013;621, 2002.</dd><dt class="dt-thebibliography"><a id="Jaric(1990)">[8]</a></dt><dd class="dd-thebibliography">
+M.&#X2004;&#X200D;V. Jari&#X107; and S.&#X2004;&#X200D;Y. Quin.
+From crystal approximants to quasicrystals.
+In T.&#X2004;&#X200D;Fujiwara and T.&#X2004;&#X200D;Ogawa, editors, <em>Quasicrystals</em>, pages
+48&#X2013;56, Berlin, 1990. Springer-Verlag.</dd><dt class="dt-thebibliography"><a id="Levitov(1988)">[9]</a></dt><dd class="dd-thebibliography">
+L.&#X2004;&#X200D;S. Levitov and J.&#X2004;&#X200D;Rhyner.
+Crystallography of quasicrystals; application to icosahedral
+symmetry.
+<em>J. Phys. France</em>, 49:1835&#X2013;1849, 1988.</dd><dt class="dt-thebibliography"><a id="Niizeki(1989c)">[10]</a></dt><dd class="dd-thebibliography">
+K.&#X2004;&#X200D;Niizeki.
+A classification of special points of icosahedral quasilattices.
+<em>J. Phys. A Math. Gen.</em>, 22:4295&#X2013;4302, 1989.</dd><dt class="dt-thebibliography"><a id="Rokhsar(1988)">[11]</a></dt><dd class="dd-thebibliography">
+D.&#X2004;&#X200D;S. Rokhsar, D.&#X2004;&#X200D;C. Wright, and N.&#X2004;&#X200D;D. Mermin.
+Scale equivalence of quasicrystallographic space groups.
+<em>Phys. Rev.</em>, B37:8145&#X2013;8149, 1988.</dd><dt class="dt-thebibliography"><a id="Takakura(2007a)">[12]</a></dt><dd class="dd-thebibliography">
+H.&#X2004;&#X200D;Takakura, C.&#X2004;&#X200D;P. G&#XF3;mez, A.&#X2004;&#X200D;Yamamoto, M.&#X2004;&#X200D;de&#X2004;&#X200D;Boissieu, and A.&#X2004;&#X200D;P. Tsai.
+Atomic structure of the binary icosahedral Yb-Cd quasicrystal.
+<em>Nature Materials</em>, 6:58&#X2013;63, 2007.</dd><dt class="dt-thebibliography"><a id="Yamamoto(1992b)">[13]</a></dt><dd class="dd-thebibliography">
+A.&#X2004;&#X200D;Yamamoto.
+Ideal structure of icosahedral Al-Cu-Li quasicrystals.
+<em>Phys. Rev.</em>, B45:5217&#X2013;5227, 1992.</dd><dt class="dt-thebibliography"><a id="Yamamoto(1996b)">[14]</a></dt><dd class="dd-thebibliography">
+A.&#X2004;&#X200D;Yamamoto.
+Crystallography of Quasiperiodic Crystals.
+<em>Acta Crystallogr.</em>, A52:509&#X2013;560, 1996.</dd><dt class="dt-thebibliography"><a id="Yamamoto(2006b)">[15]</a></dt><dd class="dd-thebibliography">
+A.&#X2004;&#X200D;Yamamoto.
+Structure Factor Calculations of Twined Crystals.
+<em>to be submitted to J. Appl. Cryst.</em>, 2006.</dd><dt class="dt-thebibliography"><a id="Yamamoto(1988b)">[16]</a></dt><dd class="dd-thebibliography">
+A.&#X2004;&#X200D;Yamamoto and K.&#X2004;&#X200D;Hiraga.
+Structure of an icosahedral Al-Mn quasicrystal.
+<em>Phys. Rev.</em>, B37:6207&#X2013;6214, 1988.</dd></dl><!--CUT END -->
+<!--HTMLFOOT-->
+<!--ENDHTML-->
+<!--FOOTER-->
+<hr class="horizontal-rule" style="height:2px"><blockquote class="quote"><em>This document was translated from L<sup>A</sup>T<sub>E</sub>X by
+</em><a href="http://hevea.inria.fr/index.html"><em>H</em><em><span style="font-size:small"><sup>E</sup></span></em><em>V</em><em><span style="font-size:small"><sup>E</sup></span></em><em>A</em></a><em>.</em></blockquote></body>
+</html>
